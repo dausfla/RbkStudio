@@ -834,7 +834,7 @@ include __DIR__ . '/includes/header.php';
     <div style="font-weight: 700; font-size: 1.125rem; letter-spacing: 0.15em; margin-bottom: 0.5rem;">RBK STUDIO</div>
     <div style="font-size: 0.8125rem; color: #8E8E8E; letter-spacing: 0.1em; margin-bottom: 2rem; text-transform: uppercase;">Architecture • Interior • Construction Planning</div>
 
-    <div class="price-summary-line">
+    <div class="price-summary-line" style="color: #FFFFFF; font-weight: 600;">
       Basic Rp60.000/m² &nbsp;•&nbsp; Standard Rp80.000/m² &nbsp;•&nbsp; Premium Rp150.000/m²
     </div>
 

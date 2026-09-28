@@ -1354,7 +1354,8 @@ ul {
 
 .price-summary-line {
   font-size: 0.875rem;
-  color: #8E8E8E;
+  color: #FFFFFF !important;
+  font-weight: 600;
   margin-bottom: 2.5rem;
   letter-spacing: 0.05em;
 }
