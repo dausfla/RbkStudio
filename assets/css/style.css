@@ -407,12 +407,20 @@ ul {
   content: "";
 }
 
+.text-white {
+  color: #FFFFFF !important;
+}
+
 /* ==========================================================================
    SECTION 02: PROBLEM -> SOLUTION
    ========================================================================== */
 .problem-part {
   background-color: var(--rbk-dark-bg);
   padding-bottom: 4rem;
+}
+
+.problem-part .section-title {
+  color: #FFFFFF;
 }
 
 .risk-grid {

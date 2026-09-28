@@ -66,7 +66,7 @@ include __DIR__ . '/includes/header.php';
 <section class="problem-part section-padding" id="problem">
   <div class="container">
     <div class="eyebrow">TAHAP PROBLEM</div>
-    <h2 class="section-title text-white"><?= e($settings['section02_problem_headline'] ?? 'Biaya Konstruksi Bisa Mencapai Ratusan Juta hingga Miliaran.'); ?></h2>
+    <h2 class="section-title text-white" style="color: #FFFFFF;"><?= e($settings['section02_problem_headline'] ?? 'Biaya Konstruksi Bisa Mencapai Ratusan Juta hingga Miliaran.'); ?></h2>
     <p class="section-subtitle"><?= e($settings['section02_problem_subheadline'] ?? 'Jangan biarkan keputusan desain yang salah membuat Anda membayar dua kali.'); ?></p>
 
     <div class="risk-grid">
