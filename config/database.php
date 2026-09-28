@@ -107,6 +107,20 @@ function initDatabase() {
         created_at DATETIME DEFAULT CURRENT_TIMESTAMP
     )");
 
+    // 7. Portfolio Videos table
+    $db->exec("CREATE TABLE IF NOT EXISTS portfolio_videos (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        title TEXT NOT NULL,
+        category TEXT DEFAULT 'Walkthrough 3D',
+        youtube_url TEXT NOT NULL,
+        thumbnail_url TEXT,
+        description TEXT,
+        duration TEXT,
+        sort_order INTEGER DEFAULT 0,
+        is_active INTEGER DEFAULT 1,
+        created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    )");
+
     // Seed default admin user if not exists
     $userCount = $db->query("SELECT COUNT(*) FROM users")->fetchColumn();
     if ($userCount == 0) {
@@ -368,6 +382,50 @@ function initDatabase() {
             $stmt->execute([
                 $pr['title'], $pr['category'], $pr['location'], $pr['scope_tags'],
                 $pr['challenge'], $pr['solution'], $pr['image_url'], $pr['sort_order']
+            ]);
+        }
+    }
+
+    // Seed default Portfolio Videos
+    $videoCount = $db->query("SELECT COUNT(*) FROM portfolio_videos")->fetchColumn();
+    if ($videoCount == 0) {
+        $videos = [
+            [
+                'title' => 'Tour Villa Minimalis Modern 2 Lantai - Architecture & Interior Showcase',
+                'category' => 'Walkthrough 3D',
+                'youtube_url' => 'https://www.youtube.com/watch?v=L_LUpnjgPso',
+                'thumbnail_url' => '',
+                'description' => 'Visualisasi 3D komprehensif & walkthrough animasi tata ruang interior villa tropis modern.',
+                'duration' => '03:45',
+                'sort_order' => 1
+            ],
+            [
+                'title' => 'Fasad Ruko Komersial 3 Lantai Gading Serpong',
+                'category' => 'Komersial',
+                'youtube_url' => 'https://www.youtube.com/watch?v=ScMzIvxBSi4',
+                'thumbnail_url' => '',
+                'description' => 'Konsep fasad komersial berkarakter geometris dengan optimalisasi setback pedestrian & pencahayaan.',
+                'duration' => '02:30',
+                'sort_order' => 2
+            ],
+            [
+                'title' => 'Virtual Tour Tropical Residence BSD City',
+                'category' => 'Showcase',
+                'youtube_url' => 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+                'thumbnail_url' => '',
+                'description' => 'Presentasi video animasi 3D inner courtyard & integrasi sirkulasi udara alami.',
+                'duration' => '04:15',
+                'sort_order' => 3
+            ]
+        ];
+
+        $stmt = $db->prepare("INSERT INTO portfolio_videos 
+            (title, category, youtube_url, thumbnail_url, description, duration, sort_order) 
+            VALUES (?, ?, ?, ?, ?, ?, ?)");
+        foreach ($videos as $v) {
+            $stmt->execute([
+                $v['title'], $v['category'], $v['youtube_url'], $v['thumbnail_url'],
+                $v['description'], $v['duration'], $v['sort_order']
             ]);
         }
     }

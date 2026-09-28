@@ -13,6 +13,9 @@ $waNumber = $settings['wa_number'] ?? '081234500441';
 // Fetch active portfolios from database
 $portfolios = $db->query("SELECT * FROM portfolio WHERE is_active = 1 ORDER BY sort_order ASC")->fetchAll();
 
+// Fetch active video showcases from database
+$portfolioVideos = $db->query("SELECT * FROM portfolio_videos WHERE is_active = 1 ORDER BY sort_order ASC, id DESC")->fetchAll();
+
 // Fetch active pricing packages from database
 $packages = $db->query("SELECT * FROM pricing_packages ORDER BY sort_order ASC")->fetchAll();
 
@@ -219,6 +222,61 @@ include __DIR__ . '/includes/header.php';
         </div>
       <?php endforeach; ?>
     </div>
+
+    <?php if (!empty($portfolioVideos)): ?>
+      <!-- Video Portfolio Showcase -->
+      <div class="video-portfolio-section">
+        <div class="video-section-header">
+          <div class="video-eyebrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="color: #EF4444;"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            VIDEO SHOWCASE & WALKTHROUGH 3D
+          </div>
+          <h3 class="video-section-title">Visualisasi 3D & Walkthrough Proyek</h3>
+          <p class="video-section-subtitle">Tonton preview animasi & video tur proyek RBK Studio secara langsung di YouTube.</p>
+        </div>
+
+        <div class="video-portfolio-grid">
+          <?php foreach ($portfolioVideos as $video): 
+            $thumbUrl = getYouTubeThumbnail($video['youtube_url'], $video['thumbnail_url']);
+          ?>
+            <a href="<?= e($video['youtube_url']); ?>" target="_blank" rel="noopener noreferrer" class="video-card">
+              <div class="video-card-media">
+                <img src="<?= e($thumbUrl); ?>" alt="<?= e($video['title']); ?>" class="video-card-img" loading="lazy" onerror="this.src='/assets/images/placeholder_video.jpg';">
+                
+                <div class="video-play-overlay">
+                  <div class="video-play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                  </div>
+                </div>
+
+                <?php if (!empty($video['duration'])): ?>
+                  <span class="video-duration-badge"><?= e($video['duration']); ?></span>
+                <?php endif; ?>
+
+                <span class="video-yt-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                  YouTube
+                </span>
+              </div>
+
+              <div class="video-card-body">
+                <div class="video-card-meta">
+                  <span class="video-card-category"><?= e($video['category'] ?? 'Walkthrough'); ?></span>
+                </div>
+                <h4 class="video-card-title"><?= e($video['title']); ?></h4>
+                <?php if (!empty($video['description'])): ?>
+                  <p class="video-card-desc"><?= e($video['description']); ?></p>
+                <?php endif; ?>
+                <div class="video-card-link">
+                  <span>Tonton di YouTube</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                </div>
+              </div>
+            </a>
+          <?php endforeach; ?>
+        </div>
+      </div>
+    <?php endif; ?>
 
     <div style="text-align: center; margin-top: 3.5rem;">
       <a href="<?= e(buildWaUrl($waNumber, 'Halo RBK Studio, saya ingin melihat galeri portfolio lengkap proyek arsitektur dan interior RBK Studio.')); ?>" target="_blank" class="btn btn-outline" data-cta-code="UMUM">

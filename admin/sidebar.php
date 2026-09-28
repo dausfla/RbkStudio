@@ -21,6 +21,11 @@ $currentPage = basename($_SERVER['PHP_SELF']);
       Portfolio (CRUD)
     </a>
 
+    <a href="/admin/videos.php" class="sidebar-link <?= $currentPage == 'videos.php' ? 'active' : ''; ?>">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+      Video Portfolio (YouTube)
+    </a>
+
     <a href="/admin/pricing.php" class="sidebar-link <?= $currentPage == 'pricing.php' ? 'active' : ''; ?>">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
       Paket & Harga

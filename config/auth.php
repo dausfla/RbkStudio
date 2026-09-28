@@ -56,3 +56,30 @@ function buildWaUrl($phone, $message) {
 function e($string) {
     return htmlspecialchars($string ?? '', ENT_QUOTES, 'UTF-8');
 }
+
+/**
+ * Extract YouTube Video ID from various YouTube URL formats
+ */
+function getYouTubeVideoId($url) {
+    if (empty($url)) return '';
+    $pattern = '/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/|youtube\.com\/shorts\/)([^"&?\/\s]{11})/';
+    if (preg_match($pattern, $url, $matches)) {
+        return $matches[1];
+    }
+    return '';
+}
+
+/**
+ * Get YouTube Thumbnail URL (fallback to default HQ if no custom thumbnail provided)
+ */
+function getYouTubeThumbnail($youtubeUrl, $customThumbnailUrl = '') {
+    if (!empty($customThumbnailUrl)) {
+        return $customThumbnailUrl;
+    }
+    $videoId = getYouTubeVideoId($youtubeUrl);
+    if (!empty($videoId)) {
+        return 'https://img.youtube.com/vi/' . $videoId . '/hqdefault.jpg';
+    }
+    return '/assets/images/placeholder_video.jpg';
+}
+
