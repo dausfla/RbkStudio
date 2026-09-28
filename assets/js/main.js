@@ -303,5 +303,47 @@ document.addEventListener('DOMContentLoaded', function () {
 
     videoCards.forEach(card => videoObserver.observe(card));
   }
+
+  // 7. Global Scroll Reveal Animation Observer
+  const selectorsToAnimate = [
+    '.section-title',
+    '.section-subtitle',
+    '.eyebrow',
+    '.value-card',
+    '.portfolio-card',
+    '.video-card',
+    '.risk-item',
+    '.why-item',
+    '.pricing-card',
+    '.process-step',
+    '.faq-item',
+    '.brief-form-card',
+    '.brand-line-banner'
+  ];
+
+  selectorsToAnimate.forEach(selector => {
+    document.querySelectorAll(selector).forEach((el, index) => {
+      if (!el.classList.contains('reveal-on-scroll')) {
+        el.classList.add('reveal-on-scroll');
+        const staggerIndex = (index % 5) + 1;
+        el.classList.add(`stagger-${staggerIndex}`);
+      }
+    });
+  });
+
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+
+    document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+      revealObserver.observe(el);
+    });
+  }
 });
+
 

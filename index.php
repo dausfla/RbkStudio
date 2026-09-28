@@ -50,15 +50,51 @@ include __DIR__ . '/includes/header.php';
     
     <p class="hero-microcopy">Konsultasikan kebutuhan, luas bangunan, style, dan estimasi scope proyek Anda bersama tim RBK Studio.</p>
 
-    <div class="trust-strip">
-      <span>Jakarta</span>
-      <span>Bogor</span>
-      <span>Depok</span>
-      <span>Tangerang</span>
-      <span>Bekasi</span>
+    <!-- Running Text Ticker / Marquee Banner for Target Cities -->
+    <div class="city-marquee-container">
+      <div class="city-marquee-track">
+        <div class="city-marquee-content">
+          <span class="city-item">JAKARTA</span><span class="marquee-bullet">•</span>
+          <span class="city-item">BOGOR</span><span class="marquee-bullet">•</span>
+          <span class="city-item">DEPOK</span><span class="marquee-bullet">•</span>
+          <span class="city-item">TANGERANG</span><span class="marquee-bullet">•</span>
+          <span class="city-item">BEKASI</span><span class="marquee-bullet">•</span>
+          <span class="city-item">JABODETABEK</span><span class="marquee-bullet">•</span>
+        </div>
+        <div class="city-marquee-content" aria-hidden="true">
+          <span class="city-item">JAKARTA</span><span class="marquee-bullet">•</span>
+          <span class="city-item">BOGOR</span><span class="marquee-bullet">•</span>
+          <span class="city-item">DEPOK</span><span class="marquee-bullet">•</span>
+          <span class="city-item">TANGERANG</span><span class="marquee-bullet">•</span>
+          <span class="city-item">BEKASI</span><span class="marquee-bullet">•</span>
+          <span class="city-item">JABODETABEK</span><span class="marquee-bullet">•</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- Full-Width Running Text Branding Marquee Banner -->
+<div class="brand-marquee-banner">
+  <div class="brand-marquee-track">
+    <div class="brand-marquee-content">
+      <span>PLAN FIRST. BUILD ONCE.</span><span>★</span>
+      <span>ARSITEKTUR & INTERIOR PLANNING</span><span>★</span>
+      <span>DESAIN MENSIMULASIKAN ANGGARAN</span><span>★</span>
+      <span>GAMBAR KERJA DED & RAB TERUKUR</span><span>★</span>
+      <span>VISUALISASI 3D WALKTHROUGH</span><span>★</span>
+      <span>JABODETABEK</span><span>★</span>
+    </div>
+    <div class="brand-marquee-content" aria-hidden="true">
+      <span>PLAN FIRST. BUILD ONCE.</span><span>★</span>
+      <span>ARSITEKTUR & INTERIOR PLANNING</span><span>★</span>
+      <span>DESAIN MENSIMULASIKAN ANGGARAN</span><span>★</span>
+      <span>GAMBAR KERJA DED & RAB TERUKUR</span><span>★</span>
+      <span>VISUALISASI 3D WALKTHROUGH</span><span>★</span>
+      <span>JABODETABEK</span><span>★</span>
+    </div>
+  </div>
+</div>
 
 <!-- ==========================================================================
      SECTION 02: PROBLEM -> SOLUTION (TAHAP PROBLEM -> DESIRE)
