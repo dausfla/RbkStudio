@@ -113,9 +113,8 @@ include __DIR__ . '/includes/header.php';
      ========================================================================== -->
 <section class="problem-part section-padding" id="problem">
   <div class="container">
-    <div class="eyebrow">TAHAP PROBLEM</div>
-    <h2 class="section-title text-white" style="color: #FFFFFF;"><?= e($settings['section02_problem_headline'] ?? 'Biaya Konstruksi Bisa Mencapai Ratusan Juta hingga Miliaran.'); ?></h2>
-    <p class="section-subtitle"><?= e($settings['section02_problem_subheadline'] ?? 'Jangan biarkan keputusan desain yang salah membuat Anda membayar dua kali.'); ?></p>
+    <h2 class="section-title text-white" style="color: #ffffff;"><?= e($settings['section02_problem_headline'] ?? 'Biaya Konstruksi Bisa Mencapai Ratusan Juta hingga Miliaran.'); ?></h2>
+    <p class="section-subtitle" style="color: var(--rbk-orange); font-weight: 600;"><?= e($settings['section02_problem_subheadline'] ?? 'Jangan biarkan keputusan desain yang salah membuat Anda membayar dua kali.'); ?></p>
 
     <div class="risk-grid">
       <div class="risk-item">Layout yang tidak nyaman</div>
@@ -138,9 +137,8 @@ include __DIR__ . '/includes/header.php';
 
 <section class="solution-part section-padding" id="solution">
   <div class="container">
-    <div class="eyebrow">TAHAP DESIRE & SOLUSI</div>
     <h2 class="section-title"><?= e($settings['section02_solution_headline'] ?? 'Kami Tidak Hanya Mendesain Bangunan.'); ?></h2>
-    <p class="section-subtitle"><?= e($settings['section02_solution_subheadline'] ?? 'Kami Merencanakan Bagaimana Anda Akan Hidup di Dalamnya.'); ?></p>
+    <p class="section-subtitle" style="color: var(--rbk-orange); font-weight: 600;"><?= e($settings['section02_solution_subheadline'] ?? 'Kami Merencanakan Bagaimana Anda Akan Hidup di Dalamnya.'); ?></p>
     
     <p class="solution-body"><?= e($settings['section02_solution_body'] ?? 'Setiap ruang memiliki fungsi. Setiap ukuran memiliki alasan. Setiap material memiliki pertimbangan. Setiap detail direncanakan agar bangunan Anda memiliki keseimbangan antara estetika, fungsi, kenyamanan, efisiensi, dan nilai.'); ?></p>
     
@@ -164,9 +162,8 @@ include __DIR__ . '/includes/header.php';
      ========================================================================== -->
 <section class="theme-white section-padding" id="layanan">
   <div class="container">
-    <div class="eyebrow">TAHAP VALUE</div>
     <h2 class="section-title"><?= e($settings['section03_headline'] ?? 'Luxury Is Not About Making Everything Expensive.'); ?></h2>
-    <p class="section-subtitle"><?= e($settings['section03_subheadline'] ?? 'Luxury Is About Making Every Decision Feel Intentional.'); ?></p>
+    <p class="section-subtitle" style="color: var(--rbk-orange); font-weight: 600;"><?= e($settings['section03_subheadline'] ?? 'Luxury Is About Making Every Decision Feel Intentional.'); ?></p>
     
     <p style="font-size: 1.0625rem; color: #525252; max-width: 760px; margin-bottom: 2.5rem; line-height: 1.7;">
       <?= e($settings['section03_body'] ?? 'Bangunan premium bukan bangunan yang dipenuhi material mahal. Bangunan premium adalah bangunan yang proporsional, memiliki flow ruang yang baik, detailnya konsisten, materialnya tepat, dan setiap elemen terasa direncanakan.'); ?>
@@ -219,9 +216,8 @@ include __DIR__ . '/includes/header.php';
      ========================================================================== -->
 <section class="theme-light section-padding" id="portfolio">
   <div class="container">
-    <div class="eyebrow">TAHAP PROOF</div>
     <h2 class="section-title">Bukan Sekadar Render.</h2>
-    <p class="section-subtitle">Setiap desain dimulai dari masalah yang harus diselesaikan.</p>
+    <p class="section-subtitle" style="color: var(--rbk-orange); font-weight: 600;">Setiap desain dimulai dari masalah yang harus diselesaikan.</p>
 
     <!-- Portfolio Category Tabs -->
     <div class="portfolio-tabs">
@@ -332,9 +328,8 @@ include __DIR__ . '/includes/header.php';
      ========================================================================== -->
 <section class="theme-white section-padding" id="tentang">
   <div class="container">
-    <div class="eyebrow">TAHAP TRUST</div>
     <h2 class="section-title">Why RBK Studio</h2>
-    <p class="section-subtitle">Mengubah capability menjadi alasan kuat untuk memilih partner perencanaan terbaik.</p>
+    <p class="section-subtitle" style="color: var(--rbk-orange); font-weight: 600;">Mengubah capability menjadi alasan kuat untuk memilih partner perencanaan terbaik.</p>
 
     <div class="why-grid">
       <div class="why-item">
@@ -382,7 +377,6 @@ include __DIR__ . '/includes/header.php';
      ========================================================================== -->
 <section class="theme-light section-padding" id="paket">
   <div class="container">
-    <div class="eyebrow">TAHAP PRICING</div>
     <h2 class="section-title">Investasi Kecil pada Desain. Dampaknya Besar pada Keseluruhan Proyek.</h2>
     <p style="font-size: 1.0625rem; color: #525252; max-width: 820px; line-height: 1.7; margin-bottom: 2.5rem;">
       Anda mungkin akan menginvestasikan ratusan juta hingga miliaran rupiah untuk membangun properti. Maka pertanyaannya bukan “Berapa biaya desainnya?”, tetapi “Berapa besar risiko yang bisa saya hindari ketika semuanya direncanakan dengan benar sejak awal?”
@@ -567,7 +561,6 @@ include __DIR__ . '/includes/header.php';
      ========================================================================== -->
 <section class="hardsell-band" id="hardsell">
   <div class="container">
-    <div class="eyebrow">TAHAP HARD-SELL VALUE</div>
     <h2 class="hardsell-headline"><?= e($settings['section07_headline'] ?? 'Jangan Menghemat pada Bagian yang Menentukan Seluruh Pembangunan.'); ?></h2>
     
     <p class="hardsell-body"><?= e($settings['section07_body'] ?? 'Salah menentukan cat masih bisa diganti. Salah memilih furniture masih bisa diperbaiki. Tetapi ketika struktur sudah dibangun, dinding sudah berdiri, instalasi sudah tertanam, dan pekerjaan konstruksi sudah berjalan, perubahan menjadi jauh lebih mahal.'); ?></p>
@@ -588,7 +581,6 @@ include __DIR__ . '/includes/header.php';
      ========================================================================== -->
 <section class="theme-white section-padding" id="proses">
   <div class="container">
-    <div class="eyebrow">TAHAP PROCESS</div>
     <h2 class="section-title">Dari Ide hingga Siap Dibangun</h2>
     <p class="section-subtitle">Alur kerja transparan, terstruktur, dan aman dari tahap konsultasi hingga penyerahan berkas.</p>
 
@@ -648,7 +640,6 @@ include __DIR__ . '/includes/header.php';
      ========================================================================== -->
 <section class="theme-light section-padding" id="segment">
   <div class="container">
-    <div class="eyebrow">TAHAP SEGMENT</div>
     <h2 class="section-title">Desain untuk Kebutuhan Bangunan yang Berbeda</h2>
     
     <div class="segment-panels">
@@ -702,7 +693,6 @@ include __DIR__ . '/includes/header.php';
      ========================================================================== -->
 <section class="theme-white section-padding" id="faq">
   <div class="container">
-    <div class="eyebrow" style="text-align: center; display: block;">BLOK FAQ</div>
     <h2 class="section-title" style="text-align: center;">Pertanyaan yang Sering Diajukan</h2>
 
     <div class="faq-container">
@@ -754,7 +744,6 @@ include __DIR__ . '/includes/header.php';
      ========================================================================== -->
 <section class="theme-light section-padding" id="lead-capture-section">
   <div class="container">
-    <div class="eyebrow" style="text-align: center; display: block;">LEAD CAPTURE FORM</div>
     <h2 class="section-title" style="text-align: center; max-width: 900px; margin-left: auto; margin-right: auto;">
       <?= e($settings['section11_headline'] ?? 'Punya Tanah? Sudah Punya Ide? Atau Masih Bingung Harus Mulai dari Mana?'); ?>
     </h2>
@@ -837,9 +826,10 @@ include __DIR__ . '/includes/header.php';
      SECTION 12: FINAL CLOSING (TAHAP CLOSING)
      ========================================================================== -->
 <section class="final-closing" id="closing">
-  <div class="container">
-    <h2 class="final-title font-serif"><?= e($settings['section12_headline'] ?? 'Anda Hanya Perlu Membangunnya Sekali.'); ?></h2>
-    <p class="final-subtitle"><?= e($settings['section12_subheadline'] ?? 'Pastikan Semuanya Direncanakan dengan Tepat.'); ?></p>
+  <div class="container" style="text-align: center;">
+    <h2 class="final-title font-serif" style="text-align: center; max-width: 900px; margin: 0 auto 1.5rem auto;">
+      Anda Hanya Perlu Membangunnya Sekali. Pastikan Semuanya Direncanakan dengan Tepat.
+    </h2>
 
     <div style="font-weight: 700; font-size: 1.125rem; letter-spacing: 0.15em; margin-bottom: 0.5rem;">RBK STUDIO</div>
     <div style="font-size: 0.8125rem; color: #8E8E8E; letter-spacing: 0.1em; margin-bottom: 2rem; text-transform: uppercase;">Architecture • Interior • Construction Planning</div>
