@@ -287,6 +287,34 @@ ul {
   font-size: 0.75rem;
 }
 
+.header-wa-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.header-wa-btn:hover {
+  background: #25D366;
+  border-color: #25D366;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(37, 211, 102, 0.5);
+}
+
+.header-wa-icon {
+  width: 22px;
+  height: 22px;
+  fill: #FFFFFF;
+}
+
 .mobile-nav-toggle {
   display: none;
   background: none;
