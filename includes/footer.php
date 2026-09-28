@@ -55,6 +55,24 @@ $waUrlMobile = buildWaUrl($waNumber, $waMsgMobile);
     </div>
   </footer>
 
+  <!-- Scroll-Triggered Promotional Pop-up Modal -->
+  <div id="promoModal" class="promo-modal-overlay">
+    <div class="promo-modal-container">
+      <button class="promo-modal-close" id="promoModalClose" aria-label="Tutup Promo">&times;</button>
+      <div class="promo-modal-body">
+        <a href="<?= e(buildWaUrl($waNumber, 'Halo RBK Studio, saya berminat dengan promo Paket Perencanaan Rancang Bangun Kreasi.')); ?>" target="_blank" data-cta-code="PROMO_POPUP" class="promo-img-link">
+          <img src="/assets/images/promo_poster.png" alt="Paket Perencanaan RBK Studio Promo" class="promo-poster-img">
+        </a>
+        <div class="promo-modal-footer">
+          <a href="<?= e(buildWaUrl($waNumber, 'Halo RBK Studio, saya berminat dengan promo Paket Perencanaan Rancang Bangun Kreasi.')); ?>" target="_blank" data-cta-code="PROMO_POPUP" class="btn btn-primary promo-cta-btn">
+            <svg class="wa-icon" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.705 1.754zm6.097-4.901l.374.222c1.464.869 3.146 1.328 4.863 1.329 5.26 0 9.54-4.28 9.543-9.544.001-2.548-.991-4.943-2.793-6.746-1.801-1.802-4.195-2.794-6.744-2.795-5.263 0-9.544 4.28-9.546 9.545-.001 1.78.47 3.515 1.365 5.064l.244.423-1.002 3.662 3.696-.969z"/></svg>
+            Konsultasi & Ambil Promo
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Sticky Mobile Bar (Disappear when Section 11 is in viewport) -->
   <div class="sticky-mobile-bar" id="stickyMobileBar">
     <a href="<?= e($waUrlMobile); ?>" target="_blank" class="btn btn-primary" style="width: 100%;" data-cta-code="UMUM">

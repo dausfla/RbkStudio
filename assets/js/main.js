@@ -344,6 +344,52 @@ document.addEventListener('DOMContentLoaded', function () {
       revealObserver.observe(el);
     });
   }
+
+  // 8. Scroll-Triggered Promo Pop-up Modal Logic
+  const promoModal = document.getElementById('promoModal');
+  const promoModalClose = document.getElementById('promoModalClose');
+
+  if (promoModal && promoModalClose) {
+    let hasShownPromo = sessionStorage.getItem('rbk_promo_dismissed') === 'true';
+
+    function openPromoModal() {
+      if (!hasShownPromo) {
+        promoModal.classList.add('active');
+        hasShownPromo = true;
+      }
+    }
+
+    function closePromoModal() {
+      promoModal.classList.remove('active');
+      sessionStorage.setItem('rbk_promo_dismissed', 'true');
+    }
+
+    // Trigger open on scroll (after user scrolls > 350px)
+    window.addEventListener('scroll', function onScrollTrigger() {
+      if (window.scrollY > 350 && !hasShownPromo) {
+        openPromoModal();
+        window.removeEventListener('scroll', onScrollTrigger);
+      }
+    });
+
+    // Close button click
+    promoModalClose.addEventListener('click', closePromoModal);
+
+    // Click backdrop outside container to close
+    promoModal.addEventListener('click', function (e) {
+      if (e.target === promoModal) {
+        closePromoModal();
+      }
+    });
+
+    // Press Escape key to close
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && promoModal.classList.contains('active')) {
+        closePromoModal();
+      }
+    });
+  }
 });
+
 
 

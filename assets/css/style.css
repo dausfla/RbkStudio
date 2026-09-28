@@ -1841,4 +1841,112 @@ ul {
 .stagger-4 { transition-delay: 0.4s; }
 .stagger-5 { transition-delay: 0.5s; }
 
+/* ==========================================================================
+   SCROLL-TRIGGERED PROMO POP-UP MODAL STYLES
+   ========================================================================== */
+.promo-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.promo-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.promo-modal-container {
+  position: relative;
+  background: #0D0D0D;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  max-width: 440px;
+  width: 100%;
+  max-height: 90vh;
+  box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.85);
+  transform: scale(0.88) translateY(25px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.promo-modal-overlay.active .promo-modal-container {
+  transform: scale(1) translateY(0);
+}
+
+.promo-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.75);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.25s ease;
+  line-height: 1;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.promo-modal-close:hover {
+  background: var(--rbk-orange);
+  border-color: var(--rbk-orange);
+  transform: rotate(90deg) scale(1.08);
+}
+
+.promo-modal-body {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: calc(90vh - 20px);
+}
+
+.promo-img-link {
+  display: block;
+  width: 100%;
+  line-height: 0;
+}
+
+.promo-poster-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.promo-modal-footer {
+  padding: 1rem;
+  background: #111111;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.promo-cta-btn {
+  width: 100%;
+  padding: 0.85rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+
 
