@@ -52,8 +52,6 @@ function initDatabase() {
         category TEXT NOT NULL,
         location TEXT NOT NULL,
         scope_tags TEXT,
-        challenge TEXT,
-        solution TEXT,
         image_url TEXT,
         sort_order INTEGER DEFAULT 0,
         is_active INTEGER DEFAULT 1,
@@ -376,12 +374,12 @@ function initDatabase() {
         ];
 
         $stmt = $db->prepare("INSERT INTO portfolio 
-            (title, category, location, scope_tags, challenge, solution, image_url, sort_order) 
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+            (title, category, location, scope_tags, image_url, sort_order) 
+            VALUES (?, ?, ?, ?, ?, ?)");
         foreach ($projects as $pr) {
             $stmt->execute([
                 $pr['title'], $pr['category'], $pr['location'], $pr['scope_tags'],
-                $pr['challenge'], $pr['solution'], $pr['image_url'], $pr['sort_order']
+                $pr['image_url'], $pr['sort_order']
             ]);
         }
     }

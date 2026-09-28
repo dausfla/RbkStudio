@@ -21,8 +21,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $category = trim($_POST['category'] ?? 'Residential');
         $location = trim($_POST['location'] ?? '');
         $scope_tags = trim($_POST['scope_tags'] ?? '');
-        $challenge = trim($_POST['challenge'] ?? '');
-        $solution = trim($_POST['solution'] ?? '');
         $sort_order = intval($_POST['sort_order'] ?? 0);
         $is_active = isset($_POST['is_active']) ? 1 : 0;
         $image_url = trim($_POST['image_url'] ?? '');
@@ -44,13 +42,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($id > 0) {
             // Update
-            $stmt = $db->prepare("UPDATE portfolio SET title=?, category=?, location=?, scope_tags=?, challenge=?, solution=?, image_url=?, sort_order=?, is_active=? WHERE id=?");
-            $stmt->execute([$title, $category, $location, $scope_tags, $challenge, $solution, $image_url, $sort_order, $is_active, $id]);
+            $stmt = $db->prepare("UPDATE portfolio SET title=?, category=?, location=?, scope_tags=?, image_url=?, sort_order=?, is_active=? WHERE id=?");
+            $stmt->execute([$title, $category, $location, $scope_tags, $image_url, $sort_order, $is_active, $id]);
             setFlash('success', 'Portfolio berhasil diperbarui.');
         } else {
             // Insert
-            $stmt = $db->prepare("INSERT INTO portfolio (title, category, location, scope_tags, challenge, solution, image_url, sort_order, is_active) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-            $stmt->execute([$title, $category, $location, $scope_tags, $challenge, $solution, $image_url, $sort_order, $is_active]);
+            $stmt = $db->prepare("INSERT INTO portfolio (title, category, location, scope_tags, image_url, sort_order, is_active) VALUES (?, ?, ?, ?, ?, ?, ?)");
+            $stmt->execute([$title, $category, $location, $scope_tags, $image_url, $sort_order, $is_active]);
             setFlash('success', 'Portfolio baru berhasil ditambahkan.');
         }
         header('Location: /admin/portfolio.php');
@@ -126,16 +124,6 @@ $portfolios = $db->query("SELECT * FROM portfolio ORDER BY sort_order ASC, id DE
               <div class="form-group-admin">
                 <label class="form-label-admin">Scope Tag (Dipisah pemisah •)</label>
                 <input type="text" name="scope_tags" class="form-control-admin" value="<?= e($item['scope_tags'] ?? 'Arsitektur • Struktur • MEP • RAB'); ?>" placeholder="Arsitektur • Struktur • MEP • RAB">
-              </div>
-
-              <div class="form-group-admin full">
-                <label class="form-label-admin">Tantangan Proyek (1-2 kalimat)</label>
-                <textarea name="challenge" class="form-control-admin" rows="2" placeholder="Jelaskan tantangan lahan atau kebutuhan klien..."><?= e($item['challenge'] ?? ''); ?></textarea>
-              </div>
-
-              <div class="form-group-admin full">
-                <label class="form-label-admin">Solusi Desain RBK (1-2 kalimat)</label>
-                <textarea name="solution" class="form-control-admin" rows="2" placeholder="Jelaskan solusi arsitektur yang diberikan RBK Studio..."><?= e($item['solution'] ?? ''); ?></textarea>
               </div>
 
               <div class="form-group-admin">
