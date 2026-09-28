@@ -238,11 +238,14 @@ include __DIR__ . '/includes/header.php';
         <div class="video-portfolio-grid">
           <?php foreach ($portfolioVideos as $video): 
             $thumbUrl = getYouTubeThumbnail($video['youtube_url'], $video['thumbnail_url']);
+            $ytId = getYouTubeVideoId($video['youtube_url']);
           ?>
-            <a href="<?= e($video['youtube_url']); ?>" target="_blank" rel="noopener noreferrer" class="video-card">
+            <a href="<?= e($video['youtube_url']); ?>" target="_blank" rel="noopener noreferrer" class="video-card" data-youtube-id="<?= e($ytId); ?>" data-youtube-url="<?= e($video['youtube_url']); ?>">
               <div class="video-card-media">
                 <img src="<?= e($thumbUrl); ?>" alt="<?= e($video['title']); ?>" class="video-card-img" loading="lazy" onerror="this.src='/assets/images/placeholder_video.jpg';">
                 
+                <div class="video-iframe-container"></div>
+
                 <div class="video-play-overlay">
                   <div class="video-play-btn">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>

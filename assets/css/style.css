@@ -1456,6 +1456,33 @@ ul {
   overflow: hidden;
 }
 
+.video-iframe-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+  overflow: hidden;
+  background: #000000;
+}
+
+.video-card.playing .video-iframe-container {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.video-preview-iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 0;
+  pointer-events: none;
+  transform: scale(1.35);
+}
+
 .video-card-img {
   width: 100%;
   height: 100%;
@@ -1474,7 +1501,13 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s ease;
+  transition: opacity 0.3s ease, background 0.3s ease;
+  z-index: 3;
+}
+
+.video-card.playing .video-play-overlay {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .video-card:hover .video-play-overlay {

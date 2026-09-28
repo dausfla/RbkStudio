@@ -233,4 +233,75 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initial calculation
     calculateEstimate();
   }
+
+  // 6. Video Portfolio Autoplay Preview Logic (Hover & Scroll Viewport)
+  const videoCards = document.querySelectorAll('.video-card[data-youtube-id]');
+
+  function playVideoPreview(card) {
+    const videoId = card.getAttribute('data-youtube-id');
+    const container = card.querySelector('.video-iframe-container');
+    if (!videoId || !container) return;
+
+    if (!container.querySelector('iframe')) {
+      const iframe = document.createElement('iframe');
+      iframe.className = 'video-preview-iframe';
+      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${videoId}&playsinline=1&modestbranding=1&rel=0&enablejsapi=1`;
+      iframe.setAttribute('frameborder', '0');
+      iframe.setAttribute('allow', 'autoplay; encrypted-media');
+      iframe.setAttribute('title', 'YouTube Video Preview');
+      container.appendChild(iframe);
+    }
+    card.classList.add('playing');
+  }
+
+  function stopVideoPreview(card) {
+    const container = card.querySelector('.video-iframe-container');
+    card.classList.remove('playing');
+    if (container) {
+      setTimeout(() => {
+        if (!card.classList.contains('playing')) {
+          container.innerHTML = '';
+        }
+      }, 400);
+    }
+  }
+
+  videoCards.forEach(card => {
+    // Hover trigger
+    card.addEventListener('mouseenter', function() {
+      playVideoPreview(this);
+    });
+
+    card.addEventListener('mouseleave', function() {
+      // Don't stop if it's the active viewport card on mobile
+      if (window.innerWidth > 768) {
+        stopVideoPreview(this);
+      }
+    });
+
+    // Handle click redirect
+    card.addEventListener('click', function (e) {
+      const targetUrl = this.getAttribute('data-youtube-url') || this.getAttribute('href');
+      if (targetUrl) {
+        e.preventDefault();
+        window.open(targetUrl, '_blank', 'noopener,noreferrer');
+      }
+    });
+  });
+
+  // IntersectionObserver: Auto play preview when video section enters viewport
+  if ('IntersectionObserver' in window && videoCards.length > 0) {
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          playVideoPreview(entry.target);
+        } else {
+          stopVideoPreview(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+
+    videoCards.forEach(card => videoObserver.observe(card));
+  }
 });
+
