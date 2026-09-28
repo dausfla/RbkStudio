@@ -29,8 +29,7 @@ $waUrlHeader = buildWaUrl($waNumber, $waMsgUmum);
   <header class="site-header">
     <div class="container header-container">
       <a href="/" class="brand-logo">
-        <span class="logo-badge">RBK</span>
-        <span>STUDIO</span>
+        <img src="/assets/images/logo-light.png" alt="Rancang Bangun Kreasi" class="site-logo-img">
       </a>
 
       <nav class="nav-menu" id="navMenu">

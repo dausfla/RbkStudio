@@ -250,16 +250,18 @@ ul {
   font-weight: 700;
   font-size: 1.125rem;
   letter-spacing: 0.15em;
+  text-decoration: none;
 }
 
-.logo-badge {
-  background-color: var(--rbk-orange);
-  color: var(--rbk-black);
-  font-weight: 900;
-  font-size: 0.75rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 2px;
-  letter-spacing: 0.05em;
+.site-logo-img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.brand-logo:hover .site-logo-img {
+  transform: scale(1.04);
 }
 
 .nav-menu {

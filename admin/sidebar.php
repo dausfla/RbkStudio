@@ -5,9 +5,9 @@
 $currentPage = basename($_SERVER['PHP_SELF']);
 ?>
 <div class="admin-sidebar">
-  <div class="sidebar-header">
-    <span class="sidebar-badge">RBK</span>
-    <span>CMS DASHBOARD</span>
+  <div class="sidebar-header" style="display: flex; align-items: center; gap: 0.75rem;">
+    <img src="/assets/images/logo-light.png" alt="RBK Studio Logo" style="height: 38px; width: auto; object-fit: contain;">
+    <span style="font-size: 0.7rem; font-weight: 700; color: var(--admin-primary); letter-spacing: 0.1em; background: rgba(59,130,246,0.15); padding: 0.2rem 0.4rem; border-radius: 3px;">CMS</span>
   </div>
 
   <nav class="sidebar-nav">
