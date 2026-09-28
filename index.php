@@ -78,20 +78,32 @@ include __DIR__ . '/includes/header.php';
 <div class="brand-marquee-banner">
   <div class="brand-marquee-track">
     <div class="brand-marquee-content">
-      <span>PLAN FIRST. BUILD ONCE.</span><span>★</span>
-      <span>ARSITEKTUR & INTERIOR PLANNING</span><span>★</span>
-      <span>DESAIN MENSIMULASIKAN ANGGARAN</span><span>★</span>
-      <span>GAMBAR KERJA DED & RAB TERUKUR</span><span>★</span>
-      <span>VISUALISASI 3D WALKTHROUGH</span><span>★</span>
-      <span>JABODETABEK</span><span>★</span>
+      <span>PLAN FIRST. BUILD ONCE.</span>
+      <svg class="marquee-house-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9.5z"/><path d="M6.5 7.5V4.5h2v1.5"/><path d="M7 21v-7h4v7"/><rect x="13" y="13.5" width="5" height="5"/><line x1="15.5" y1="13.5" x2="15.5" y2="18.5"/><line x1="13" y1="16" x2="18" y2="16"/></svg>
+      <span>ARSITEKTUR & INTERIOR PLANNING</span>
+      <svg class="marquee-house-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9.5z"/><path d="M6.5 7.5V4.5h2v1.5"/><path d="M7 21v-7h4v7"/><rect x="13" y="13.5" width="5" height="5"/><line x1="15.5" y1="13.5" x2="15.5" y2="18.5"/><line x1="13" y1="16" x2="18" y2="16"/></svg>
+      <span>DESAIN MENSIMULASIKAN ANGGARAN</span>
+      <svg class="marquee-house-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9.5z"/><path d="M6.5 7.5V4.5h2v1.5"/><path d="M7 21v-7h4v7"/><rect x="13" y="13.5" width="5" height="5"/><line x1="15.5" y1="13.5" x2="15.5" y2="18.5"/><line x1="13" y1="16" x2="18" y2="16"/></svg>
+      <span>GAMBAR KERJA DED & RAB TERUKUR</span>
+      <svg class="marquee-house-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9.5z"/><path d="M6.5 7.5V4.5h2v1.5"/><path d="M7 21v-7h4v7"/><rect x="13" y="13.5" width="5" height="5"/><line x1="15.5" y1="13.5" x2="15.5" y2="18.5"/><line x1="13" y1="16" x2="18" y2="16"/></svg>
+      <span>VISUALISASI 3D WALKTHROUGH</span>
+      <svg class="marquee-house-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9.5z"/><path d="M6.5 7.5V4.5h2v1.5"/><path d="M7 21v-7h4v7"/><rect x="13" y="13.5" width="5" height="5"/><line x1="15.5" y1="13.5" x2="15.5" y2="18.5"/><line x1="13" y1="16" x2="18" y2="16"/></svg>
+      <span>JABODETABEK</span>
+      <svg class="marquee-house-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9.5z"/><path d="M6.5 7.5V4.5h2v1.5"/><path d="M7 21v-7h4v7"/><rect x="13" y="13.5" width="5" height="5"/><line x1="15.5" y1="13.5" x2="15.5" y2="18.5"/><line x1="13" y1="16" x2="18" y2="16"/></svg>
     </div>
     <div class="brand-marquee-content" aria-hidden="true">
-      <span>PLAN FIRST. BUILD ONCE.</span><span>★</span>
-      <span>ARSITEKTUR & INTERIOR PLANNING</span><span>★</span>
-      <span>DESAIN MENSIMULASIKAN ANGGARAN</span><span>★</span>
-      <span>GAMBAR KERJA DED & RAB TERUKUR</span><span>★</span>
-      <span>VISUALISASI 3D WALKTHROUGH</span><span>★</span>
-      <span>JABODETABEK</span><span>★</span>
+      <span>PLAN FIRST. BUILD ONCE.</span>
+      <svg class="marquee-house-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9.5z"/><path d="M6.5 7.5V4.5h2v1.5"/><path d="M7 21v-7h4v7"/><rect x="13" y="13.5" width="5" height="5"/><line x1="15.5" y1="13.5" x2="15.5" y2="18.5"/><line x1="13" y1="16" x2="18" y2="16"/></svg>
+      <span>ARSITEKTUR & INTERIOR PLANNING</span>
+      <svg class="marquee-house-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9.5z"/><path d="M6.5 7.5V4.5h2v1.5"/><path d="M7 21v-7h4v7"/><rect x="13" y="13.5" width="5" height="5"/><line x1="15.5" y1="13.5" x2="15.5" y2="18.5"/><line x1="13" y1="16" x2="18" y2="16"/></svg>
+      <span>DESAIN MENSIMULASIKAN ANGGARAN</span>
+      <svg class="marquee-house-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9.5z"/><path d="M6.5 7.5V4.5h2v1.5"/><path d="M7 21v-7h4v7"/><rect x="13" y="13.5" width="5" height="5"/><line x1="15.5" y1="13.5" x2="15.5" y2="18.5"/><line x1="13" y1="16" x2="18" y2="16"/></svg>
+      <span>GAMBAR KERJA DED & RAB TERUKUR</span>
+      <svg class="marquee-house-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9.5z"/><path d="M6.5 7.5V4.5h2v1.5"/><path d="M7 21v-7h4v7"/><rect x="13" y="13.5" width="5" height="5"/><line x1="15.5" y1="13.5" x2="15.5" y2="18.5"/><line x1="13" y1="16" x2="18" y2="16"/></svg>
+      <span>VISUALISASI 3D WALKTHROUGH</span>
+      <svg class="marquee-house-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9.5z"/><path d="M6.5 7.5V4.5h2v1.5"/><path d="M7 21v-7h4v7"/><rect x="13" y="13.5" width="5" height="5"/><line x1="15.5" y1="13.5" x2="15.5" y2="18.5"/><line x1="13" y1="16" x2="18" y2="16"/></svg>
+      <span>JABODETABEK</span>
+      <svg class="marquee-house-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9.5z"/><path d="M6.5 7.5V4.5h2v1.5"/><path d="M7 21v-7h4v7"/><rect x="13" y="13.5" width="5" height="5"/><line x1="15.5" y1="13.5" x2="15.5" y2="18.5"/><line x1="13" y1="16" x2="18" y2="16"/></svg>
     </div>
   </div>
 </div>

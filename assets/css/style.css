@@ -1789,6 +1789,16 @@ ul {
   white-space: nowrap;
 }
 
+.marquee-house-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+  stroke: currentColor;
+  stroke-width: 2.2;
+}
+
 @keyframes marqueeContinuous {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
