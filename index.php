@@ -406,7 +406,7 @@ include __DIR__ . '/includes/header.php';
           </div>
 
           <div>
-            <div style="font-size: 0.8125rem; color: #A3A3A3; margin-bottom: 0.5rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Pilih Paket Desain:</div>
+            <div style="font-size: 0.9375rem; color: #A3A3A3; margin-bottom: 0.5rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Pilih Paket Desain:</div>
             <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
               <button type="button" class="calc-pkg-btn" data-price="60000" data-name="Basic" data-code="BASIC">Basic (60rb/m²)</button>
               <button type="button" class="calc-pkg-btn active" data-price="80000" data-name="Standard" data-code="STANDARD">Standard (80rb/m²)</button>
@@ -416,10 +416,10 @@ include __DIR__ . '/includes/header.php';
         </div>
 
         <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 2rem; border-radius: 6px; text-align: center;">
-          <div style="font-size: 0.8125rem; color: #A3A3A3; text-transform: uppercase; letter-spacing: 0.1em;">Estimasi Biaya Desain:</div>
+          <div style="font-size: 0.9375rem; color: #A3A3A3; text-transform: uppercase; letter-spacing: 0.1em;">Estimasi Biaya Desain:</div>
           <div class="result-price-big" id="calcTotalCost">Rp12.000.000</div>
           
-          <div style="font-size: 0.8125rem; color: #D4D4D4; margin-bottom: 1.5rem;">
+          <div style="font-size: 0.9375rem; color: #D4D4D4; margin-bottom: 1.5rem;">
             Perkiraan Waktu: <strong id="calcDuration" style="color: #FFF;">14-28 Hari Kerja</strong>
           </div>
 
@@ -490,7 +490,7 @@ include __DIR__ . '/includes/header.php';
       <?php endforeach; ?>
     </div>
 
-    <p style="text-align: center; font-size: 0.8125rem; color: #737373; margin-top: 1.5rem;">
+    <p style="text-align: center; font-size: 0.9375rem; color: #737373; margin-top: 1.5rem;">
       Biaya desain dihitung dari luas bangunan yang direncanakan. Tanda jadi dan termin pembayaran dijelaskan di FAQ.
     </p>
 
@@ -622,7 +622,7 @@ include __DIR__ . '/includes/header.php';
       </div>
     </div>
 
-    <p style="text-align: center; font-size: 0.8125rem; color: #737373; margin-top: 3rem;">
+    <p style="text-align: center; font-size: 0.9375rem; color: #737373; margin-top: 3rem;">
       Pembayaran dilakukan bertahap mengikuti persetujuan setiap tahap desain. Detail ada di FAQ.
     </p>
 
@@ -808,7 +808,7 @@ include __DIR__ . '/includes/header.php';
           <div style="font-size: 0.875rem; font-weight: 700; color: var(--rbk-orange);">
             Mulai dari Rp60.000/m² • Free Konsultasi Awal
           </div>
-          <div style="font-size: 0.8125rem; color: #737373;">
+          <div style="font-size: 0.9375rem; color: #737373;">
             Coverage: Jakarta • Bogor • Depok • Tangerang • Bekasi
           </div>
         </div>
@@ -832,7 +832,7 @@ include __DIR__ . '/includes/header.php';
     </h2>
 
     <div style="font-weight: 700; font-size: 1.125rem; letter-spacing: 0.15em; margin-bottom: 0.5rem;">RBK STUDIO</div>
-    <div style="font-size: 0.8125rem; color: #8E8E8E; letter-spacing: 0.1em; margin-bottom: 2rem; text-transform: uppercase;">Architecture • Interior • Construction Planning</div>
+    <div style="font-size: 0.9375rem; color: #8E8E8E; letter-spacing: 0.1em; margin-bottom: 2rem; text-transform: uppercase;">Architecture • Interior • Construction Planning</div>
 
     <div class="price-summary-line" style="color: #FFFFFF; font-weight: 600;">
       Basic Rp60.000/m² &nbsp;•&nbsp; Standard Rp80.000/m² &nbsp;•&nbsp; Premium Rp150.000/m²
