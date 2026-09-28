@@ -805,7 +805,7 @@ include __DIR__ . '/includes/header.php';
         </div>
 
         <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
-          <div style="font-size: 0.875rem; font-weight: 700; color: var(--rbk-orange);">
+          <div style="font-size: 0.875rem; font-weight: 700; color: #FFFFFF;">
             Mulai dari Rp60.000/m² • Free Konsultasi Awal
           </div>
           <div style="font-size: 0.9375rem; color: #737373;">
