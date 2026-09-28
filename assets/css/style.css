@@ -284,7 +284,17 @@ ul {
 
 .header-cta {
   padding: 0.625rem 1.25rem;
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header-wa-icon {
+  width: 18px;
+  height: 18px;
+  fill: #FFFFFF !important;
+  flex-shrink: 0;
 }
 
 .header-wa-btn {
