@@ -9,11 +9,12 @@ checkAuth();
 $db = getDB();
 $flash = getFlash();
 
-$id = intval($_GET['id'] ?? 0);
+$id = intval($_POST['id'] ?? $_GET['id'] ?? 0);
 $action = $_GET['action'] ?? 'list';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $postAction = $_POST['post_action'] ?? '';
+    $id = intval($_POST['id'] ?? $id);
 
     if ($postAction === 'save') {
         $name = trim($_POST['name'] ?? '');
@@ -75,6 +76,7 @@ $packages = $db->query("SELECT * FROM pricing_packages ORDER BY sort_order ASC")
           
           <form method="POST">
             <input type="hidden" name="post_action" value="save">
+            <input type="hidden" name="id" value="<?= $package['id']; ?>">
 
             <div class="form-grid">
               <div class="form-group-admin">

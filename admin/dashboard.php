@@ -74,7 +74,7 @@ $settings = getSettings();
         <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
           <a href="/admin/portfolio.php?action=create" class="btn-admin btn-admin-primary">+ Tambah Portfolio Baru</a>
           <a href="/admin/content.php" class="btn-admin btn-admin-secondary">Ubah Copy & Nomor WA</a>
-          <a href="/admin/faq.php" class="btn-admin btn-admin-secondary">Keluar Pertanyaan FAQ</a>
+          <a href="/admin/faq.php" class="btn-admin btn-admin-secondary">Kelola Pertanyaan FAQ</a>
         </div>
       </div>
 

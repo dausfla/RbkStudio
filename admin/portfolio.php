@@ -10,11 +10,12 @@ $db = getDB();
 $flash = getFlash();
 
 $action = $_GET['action'] ?? 'list';
-$id = intval($_GET['id'] ?? 0);
+$id = intval($_POST['id'] ?? $_GET['id'] ?? 0);
 
 // Handle POST actions (Create/Update/Delete)
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $postAction = $_POST['post_action'] ?? '';
+    $id = intval($_POST['id'] ?? $id);
 
     if ($postAction === 'save') {
         $title = trim($_POST['title'] ?? '');
@@ -99,6 +100,7 @@ $portfolios = $db->query("SELECT * FROM portfolio ORDER BY sort_order ASC, id DE
           <h2 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem;"><?= $id > 0 ? 'Edit Project Portfolio' : 'Tambah Project Portfolio Baru'; ?></h2>
           <form method="POST" enctype="multipart/form-data">
             <input type="hidden" name="post_action" value="save">
+            <input type="hidden" name="id" value="<?= $id; ?>">
             
             <div class="form-grid">
               <div class="form-group-admin">

@@ -10,10 +10,11 @@ $db = getDB();
 $flash = getFlash();
 
 $action = $_GET['action'] ?? 'list';
-$id = intval($_GET['id'] ?? 0);
+$id = intval($_POST['id'] ?? $_GET['id'] ?? 0);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $postAction = $_POST['post_action'] ?? '';
+    $id = intval($_POST['id'] ?? $id);
 
     if ($postAction === 'save') {
         $question = trim($_POST['question'] ?? '');
@@ -77,6 +78,7 @@ $faqs = $db->query("SELECT * FROM faqs ORDER BY sort_order ASC, id ASC")->fetchA
           <h2 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem;"><?= $id > 0 ? 'Edit Pertanyaan FAQ' : 'Tambah Pertanyaan FAQ Baru'; ?></h2>
           <form method="POST">
             <input type="hidden" name="post_action" value="save">
+            <input type="hidden" name="id" value="<?= $id; ?>">
 
             <div class="form-group-admin">
               <label class="form-label-admin">Pertanyaan (Question) *</label>
