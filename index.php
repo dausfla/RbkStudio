@@ -31,11 +31,14 @@ include __DIR__ . '/includes/header.php';
 <section class="hero-section" id="hero">
   <div class="hero-overlay"></div>
   <div class="container hero-content">
-    <div class="eyebrow"><?= e($settings['hero_eyebrow'] ?? 'ARCHITECTURE • INTERIOR • CONSTRUCTION'); ?></div>
-    <h1 class="hero-title"><?= e($settings['hero_headline'] ?? 'Bangun Sekali. Rencanakan dengan Benar Sejak Awal.'); ?></h1>
-    <p class="hero-body"><?= e($settings['hero_supporting'] ?? 'Rumah, ruko, dan bangunan bernilai tinggi tidak seharusnya dimulai dari gambar seadanya. RBK Studio membantu Anda merencanakan bangunan secara menyeluruh, mulai dari konsep arsitektur, gambar kerja, struktur & MEP, RAB, hingga visualisasi 3D.'); ?></p>
+    <div class="eyebrow"><?= e($settings['hero_eyebrow'] ?? 'RBK Studio · Architecture & Planning'); ?></div>
+    <h1 class="hero-title"><?= e($settings['hero_headline'] ?? 'Jasa Arsitek Terbaik & Terlengkap untuk Mewujudkan Bangunan Impian Anda'); ?></h1>
     
-    <div class="hero-price-cue"><?= e($settings['hero_price_cue'] ?? 'Mulai dari Rp60.000/m²'); ?></div>
+    <div style="font-size: clamp(1.25rem, 2.2vw, 1.6rem); font-weight: 700; color: #FFFFFF; margin-bottom: 1rem; border-left: 3px solid var(--rbk-orange); padding-left: 0.75rem; text-align: left;">
+      Dari Konsep hingga Siap Dibangun, Semua Direncanakan dalam Satu Layanan.
+    </div>
+
+    <p class="hero-body"><?= e($settings['hero_supporting'] ?? 'RBK Studio membantu merencanakan rumah, ruko, renovasi hingga bangunan komersial secara menyeluruh, mulai dari konsep arsitektur, visualisasi 3D, gambar kerja, struktur & MEP, hingga RAB.'); ?></p>
     
     <div class="hero-cta-group">
       <?php 
@@ -45,15 +48,16 @@ include __DIR__ . '/includes/header.php';
         <svg class="header-wa-icon" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.764.459 3.485 1.332 5.001L2 22l5.127-1.338c1.464.795 3.111 1.213 4.88 1.214h.005c5.503 0 9.988-4.478 9.989-9.984 0-2.668-1.037-5.176-2.922-7.062A9.925 9.925 0 0 0 12.012 2zm5.827 14.19c-.244.688-1.42 1.314-1.95 1.397-.492.077-1.129.11-1.815-.109-.415-.132-.951-.309-1.642-.607-2.906-1.258-4.799-4.2-4.945-4.394-.146-.195-1.189-1.58-1.189-3.013 0-1.433.748-2.138 1.014-2.428.266-.29.58-.363.774-.363.194 0 .387.001.555.009.178.008.416-.068.65.493.244.58.826 2.013.899 2.158.073.146.121.315.024.507-.097.192-.145.312-.29.484-.145.172-.305.385-.436.517-.145.146-.297.305-.128.595.169.29.749 1.237 1.607 2.001 1.103.982 2.033 1.287 2.324 1.432.29.145.46.121.63-.073.17-.194.726-.846.919-1.137.193-.29.387-.242.652-.145.265.097 1.688.796 1.979.941.29.145.483.218.555.339.073.121.073.702-.171 1.39z"/></svg>
         Konsultasikan Proyek Anda
       </a>
-      <a href="#portfolio" class="btn btn-outline">Lihat Portfolio RBK</a>
+      <a href="#paket" class="btn btn-outline">Lihat Paket Desain</a>
     </div>
     
-    <p class="hero-microcopy">Konsultasikan kebutuhan, luas bangunan, style, dan estimasi scope proyek Anda bersama tim RBK Studio.</p>
+    <p class="hero-microcopy">Bukan hanya indah secara visual, tetapi juga fungsional, terukur, efisien, dan siap direalisasikan.</p>
 
     <!-- Running Text Ticker / Marquee Banner for Target Cities -->
     <div class="city-marquee-container">
       <div class="city-marquee-track">
         <div class="city-marquee-content">
+          <span class="city-item">JASA DESAIN MULAI RP60.000/M²</span><span class="marquee-bullet">•</span>
           <span class="city-item">JAKARTA</span><span class="marquee-bullet">•</span>
           <span class="city-item">BOGOR</span><span class="marquee-bullet">•</span>
           <span class="city-item">DEPOK</span><span class="marquee-bullet">•</span>
@@ -62,6 +66,7 @@ include __DIR__ . '/includes/header.php';
           <span class="city-item">JABODETABEK</span><span class="marquee-bullet">•</span>
         </div>
         <div class="city-marquee-content" aria-hidden="true">
+          <span class="city-item">JASA DESAIN MULAI RP60.000/M²</span><span class="marquee-bullet">•</span>
           <span class="city-item">JAKARTA</span><span class="marquee-bullet">•</span>
           <span class="city-item">BOGOR</span><span class="marquee-bullet">•</span>
           <span class="city-item">DEPOK</span><span class="marquee-bullet">•</span>
@@ -113,17 +118,19 @@ include __DIR__ . '/includes/header.php';
      ========================================================================== -->
 <section class="problem-part section-padding" id="problem">
   <div class="container">
-    <h2 class="section-title text-white" style="color: #ffffff;"><?= e($settings['section02_problem_headline'] ?? 'Biaya Konstruksi Bisa Mencapai Ratusan Juta hingga Miliaran.'); ?></h2>
-    <p class="section-subtitle" style="color: var(--rbk-orange); font-weight: 600;"><?= e($settings['section02_problem_subheadline'] ?? 'Jangan biarkan keputusan desain yang salah membuat Anda membayar dua kali.'); ?></p>
+    <div class="eyebrow" style="margin-bottom: 0.5rem; color: var(--rbk-orange);">KENAPA PERENCANAAN PENTING</div>
+    <h2 class="section-title text-white" style="color: #ffffff;"><?= e($settings['section02_problem_headline'] ?? 'Bangun Sekali. Rencanakan dengan Benar Sejak Awal.'); ?></h2>
+    <p class="section-subtitle" style="color: var(--rbk-orange); font-weight: 700; font-size: clamp(1.75rem, 3.2vw, 2.35rem); line-height: 1.35; max-width: 900px;"><?= e($settings['section02_problem_subheadline'] ?? 'Jangan biarkan keputusan desain yang salah membuat Anda membayar dua kali.'); ?></p>
+
+    <p style="color: #D4D4D4; font-size: 1.0625rem; max-width: 800px; margin-bottom: 1.5rem; line-height: 1.7;">
+      Kesalahan dalam perencanaan bisa membuat proses pembangunan lebih rumit dan biaya semakin besar. Masalah-masalah ini sering kali terjadi karena keputusan penting belum direncanakan sejak awal:
+    </p>
 
     <div class="risk-grid">
-      <div class="risk-item">Layout yang tidak nyaman</div>
-      <div class="risk-item">Struktur yang tidak terencana</div>
-      <div class="risk-item">Ruang yang tidak optimal</div>
-      <div class="risk-item">Instalasi listrik & plumbing yang berantakan</div>
-      <div class="risk-item">Perubahan saat konstruksi</div>
-      <div class="risk-item">Pembengkakan budget pembangunan</div>
-      <div class="risk-item">Pekerjaan bongkar ulang</div>
+      <div class="risk-item">Layout kurang optimal</div>
+      <div class="risk-item">Perubahan instalasi di tengah jalan</div>
+      <div class="risk-item">Bongkar ulang</div>
+      <div class="risk-item">Pembengkakan budget</div>
     </div>
   </div>
 </section>
@@ -137,12 +144,13 @@ include __DIR__ . '/includes/header.php';
 
 <section class="solution-part section-padding" id="solution">
   <div class="container">
-    <h2 class="section-title"><?= e($settings['section02_solution_headline'] ?? 'Kami Tidak Hanya Mendesain Bangunan.'); ?></h2>
-    <p class="section-subtitle" style="color: var(--rbk-orange); font-weight: 600;"><?= e($settings['section02_solution_subheadline'] ?? 'Kami Merencanakan Bagaimana Anda Akan Hidup di Dalamnya.'); ?></p>
+    <div class="eyebrow" style="margin-bottom: 0.5rem; color: var(--rbk-orange);">FILOSOFI DESAIN</div>
+    <h2 class="section-title"><?= e($settings['section02_solution_headline'] ?? 'Bukan Sekadar Bagus di Render.'); ?></h2>
+    <p class="section-subtitle" style="color: var(--rbk-orange); font-weight: 600;"><?= e($settings['section02_solution_subheadline'] ?? 'Tetapi Direncanakan untuk Bisa Dibangun.'); ?></p>
     
-    <p class="solution-body"><?= e($settings['section02_solution_body'] ?? 'Setiap ruang memiliki fungsi. Setiap ukuran memiliki alasan. Setiap material memiliki pertimbangan. Setiap detail direncanakan agar bangunan Anda memiliki keseimbangan antara estetika, fungsi, kenyamanan, efisiensi, dan nilai.'); ?></p>
+    <p class="solution-body"><?= e($settings['section02_solution_body'] ?? 'Kami percaya desain yang baik harus memiliki keseimbangan antara Estetika, Fungsi, Kenyamanan, Efisiensi, Teknis, dan Budget. Setiap ruang memiliki fungsi. Setiap ukuran memiliki alasan. Setiap detail direncanakan agar dapat direalisasikan secara presisi.'); ?></p>
     
-    <p class="solution-closing"><?= e($settings['section02_solution_closing'] ?? 'RBK Studio merancang bangunan yang pantas dibangun, bukan hanya menarik untuk dilihat.'); ?></p>
+    <p class="solution-closing"><?= e($settings['section02_solution_closing'] ?? 'Karena tujuan akhirnya bukan hanya menghasilkan gambar yang menarik, tetapi menciptakan bangunan yang benar-benar layak direalisasikan.'); ?></p>
 
     <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
       <?php 
@@ -158,47 +166,48 @@ include __DIR__ . '/includes/header.php';
 </section>
 
 <!-- ==========================================================================
-     SECTION 03: CORE VALUE & LUXURY POSITIONING (TAHAP VALUE)
+     SECTION 03: LINGKUP LAYANAN (TAHAP VALUE)
      ========================================================================== -->
 <section class="theme-white section-padding" id="layanan">
   <div class="container">
-    <h2 class="section-title"><?= e($settings['section03_headline'] ?? 'Luxury Is Not About Making Everything Expensive.'); ?></h2>
-    <p class="section-subtitle" style="color: var(--rbk-orange); font-weight: 600;"><?= e($settings['section03_subheadline'] ?? 'Luxury Is About Making Every Decision Feel Intentional.'); ?></p>
+    <div class="eyebrow" style="margin-bottom: 0.5rem; color: var(--rbk-orange);">LINGKUP LAYANAN</div>
+    <h2 class="section-title"><?= e($settings['section03_headline'] ?? 'Semua Kebutuhan Desain dalam Satu Layanan'); ?></h2>
+    <p class="section-subtitle" style="color: var(--rbk-orange); font-weight: 600;"><?= e($settings['section03_subheadline'] ?? 'Mulai dari Konsep Arsitektur hingga Dokumen Teknis Terukur'); ?></p>
     
     <p style="font-size: 1.0625rem; color: #525252; max-width: 760px; margin-bottom: 2.5rem; line-height: 1.7;">
-      <?= e($settings['section03_body'] ?? 'Bangunan premium bukan bangunan yang dipenuhi material mahal. Bangunan premium adalah bangunan yang proporsional, memiliki flow ruang yang baik, detailnya konsisten, materialnya tepat, dan setiap elemen terasa direncanakan.'); ?>
+      <?= e($settings['section03_body'] ?? 'RBK Studio menyediakan layanan perencanaan komprehensif untuk memastikan setiap tahap pembangunan direncanakan dengan tepat dan terintegrasi.'); ?>
     </p>
 
     <div class="values-grid">
       <div class="value-card">
         <div class="value-num">01</div>
         <div class="value-title">Konsep Arsitektur</div>
-        <div class="value-desc">Menerjemahkan kebutuhan, gaya hidup, fungsi, kondisi lahan, serta karakter yang Anda inginkan menjadi konsep desain yang jelas.</div>
+        <div class="value-desc">Konsep desain yang disesuaikan dengan kebutuhan, fungsi, lahan, dan karakter Anda.</div>
       </div>
       <div class="value-card">
         <div class="value-num">02</div>
         <div class="value-title">Space Planning</div>
-        <div class="value-desc">Setiap meter persegi direncanakan agar ruang terasa lebih proporsional, efisien, dan nyaman digunakan.</div>
+        <div class="value-desc">Penataan ruang agar lebih nyaman, proporsional, dan efisien.</div>
       </div>
       <div class="value-card">
         <div class="value-num">03</div>
         <div class="value-title">Visualisasi 3D</div>
-        <div class="value-desc">Lihat bentuk, atmosfer, dan karakter bangunan sebelum pembangunan dimulai.</div>
+        <div class="value-desc">Lihat gambaran bangunan sebelum pembangunan dimulai.</div>
       </div>
       <div class="value-card">
         <div class="value-num">04</div>
         <div class="value-title">Gambar Kerja</div>
-        <div class="value-desc">Memberikan panduan teknis yang lebih jelas untuk pelaksanaan konstruksi di lapangan.</div>
+        <div class="value-desc">Panduan teknis yang lebih jelas untuk proses konstruksi.</div>
       </div>
       <div class="value-card">
         <div class="value-num">05</div>
         <div class="value-title">Struktur & MEP</div>
-        <div class="value-desc">Perencanaan bangunan tidak berhenti pada fasad. Struktur, listrik, plumbing, dan kebutuhan teknis lainnya ikut dipertimbangkan.</div>
+        <div class="value-desc">Perencanaan struktur, listrik, plumbing, dan kebutuhan teknis sesuai lingkup proyek.</div>
       </div>
       <div class="value-card">
         <div class="value-num">06</div>
         <div class="value-title">RAB</div>
-        <div class="value-desc">Membantu Anda memahami gambaran kebutuhan biaya pembangunan secara lebih terukur.</div>
+        <div class="value-desc">Membantu memberikan gambaran kebutuhan biaya pembangunan secara lebih terukur.</div>
       </div>
     </div>
 
@@ -328,38 +337,39 @@ include __DIR__ . '/includes/header.php';
      ========================================================================== -->
 <section class="theme-white section-padding" id="tentang">
   <div class="container">
-    <h2 class="section-title">Why RBK Studio</h2>
+    <div class="eyebrow" style="margin-bottom: 0.5rem; color: var(--rbk-orange);">KEUNGGULAN</div>
+    <h2 class="section-title">Kenapa RBK Studio?</h2>
     <p class="section-subtitle" style="color: var(--rbk-orange); font-weight: 600;">Mengubah capability menjadi alasan kuat untuk memilih partner perencanaan terbaik.</p>
 
     <div class="why-grid">
       <div class="why-item">
-        <div class="why-title">Design With Purpose</div>
-        <div class="why-desc">Setiap keputusan desain harus mempunyai fungsi dan pertimbangan teknis yang matang, bukan sekadar ornamen estetika.</div>
+        <div class="why-title">Design with Purpose</div>
+        <div class="why-desc">Setiap keputusan desain memiliki fungsi dan alasan.</div>
       </div>
 
       <div class="why-item">
         <div class="why-title">Integrated Planning</div>
-        <div class="why-desc">Arsitektur, gambar kerja, struktur, MEP, dan estimasi biaya (RAB) direncanakan secara terpadu dalam satu alur terstruktur.</div>
+        <div class="why-desc">Arsitektur hingga kebutuhan teknis direncanakan dalam satu alur.</div>
       </div>
 
       <div class="why-item">
         <div class="why-title">Personalized Design</div>
-        <div class="why-desc">Bukan desain template. Setiap karya dikembangkan khusus berdasarkan karakter, kebutuhan proyek, dan lahan Anda.</div>
-      </div>
-
-      <div class="why-item">
-        <div class="why-title">Cost Awareness</div>
-        <div class="why-desc">Desain selalu mempertimbangkan realitas anggaran pembangunan sehingga keputusan dapat diambil secara rasional dan terukur.</div>
+        <div class="why-desc">Desain dikembangkan sesuai kebutuhan dan karakter setiap klien.</div>
       </div>
 
       <div class="why-item">
         <div class="why-title">Buildable Design</div>
-        <div class="why-desc">Tujuan akhir bukan hanya mendapatkan gambar indah, melainkan menghasilkan dokumen teknis yang siap dan mudah direalisasikan tukang di lapangan.</div>
+        <div class="why-desc">Bukan sekadar konsep, tetapi desain yang dipersiapkan untuk direalisasikan.</div>
+      </div>
+
+      <div class="why-item">
+        <div class="why-title">Cost Awareness</div>
+        <div class="why-desc">Perencanaan mempertimbangkan kebutuhan pembangunan dan budget.</div>
       </div>
 
       <div class="why-item">
         <div class="why-title">Jabodetabek Coverage</div>
-        <div class="why-desc">Layanan profesional terjangkau untuk wilayah Jakarta, Bogor, Depok, Tangerang, dan Bekasi dengan standar pengawasan tinggi.</div>
+        <div class="why-desc">Layanan profesional terjangkau untuk wilayah Jakarta, Bogor, Depok, Tangerang, dan Bekasi.</div>
       </div>
     </div>
 
@@ -561,17 +571,18 @@ include __DIR__ . '/includes/header.php';
      ========================================================================== -->
 <section class="hardsell-band" id="hardsell">
   <div class="container">
-    <h2 class="hardsell-headline"><?= e($settings['section07_headline'] ?? 'Jangan Menghemat pada Bagian yang Menentukan Seluruh Pembangunan.'); ?></h2>
+    <div class="eyebrow" style="margin-bottom: 0.5rem; color: var(--rbk-orange);">INVESTASI DESAIN</div>
+    <h2 class="hardsell-headline"><?= e($settings['section07_headline'] ?? 'Investasi Kecil pada Desain. Dampaknya Besar pada Pembangunan.'); ?></h2>
     
-    <p class="hardsell-body"><?= e($settings['section07_body'] ?? 'Salah menentukan cat masih bisa diganti. Salah memilih furniture masih bisa diperbaiki. Tetapi ketika struktur sudah dibangun, dinding sudah berdiri, instalasi sudah tertanam, dan pekerjaan konstruksi sudah berjalan, perubahan menjadi jauh lebih mahal.'); ?></p>
+    <p class="hardsell-body"><?= e($settings['section07_body'] ?? 'Ketika struktur sudah berdiri, dinding sudah terbangun, dan instalasi sudah tertanam, perubahan dapat menjadi jauh lebih mahal.'); ?></p>
     
-    <p class="hardsell-closing"><?= e($settings['section07_closing'] ?? 'Karena itu, keputusan terbaik dilakukan sebelum tukang mulai bekerja.'); ?></p>
+    <p class="hardsell-closing"><?= e($settings['section07_closing'] ?? 'Rencanakan keputusan penting sebelum proses konstruksi dimulai.'); ?></p>
 
     <div class="brand-signature">"<?= e($settings['brand_line_section_07'] ?? 'Plan First. Build Once.'); ?>" &mdash; RBK STUDIO</div>
 
     <a href="<?= e(buildWaUrl($waNumber, $waMsgSebelum)); ?>" target="_blank" class="btn btn-primary" data-cta-code="SEBELUM-BANGUN">
       <svg class="header-wa-icon" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.764.459 3.485 1.332 5.001L2 22l5.127-1.338c1.464.795 3.111 1.213 4.88 1.214h.005c5.503 0 9.988-4.478 9.989-9.984 0-2.668-1.037-5.176-2.922-7.062A9.925 9.925 0 0 0 12.012 2zm5.827 14.19c-.244.688-1.42 1.314-1.95 1.397-.492.077-1.129.11-1.815-.109-.415-.132-.951-.309-1.642-.607-2.906-1.258-4.799-4.2-4.945-4.394-.146-.195-1.189-1.58-1.189-3.013 0-1.433.748-2.138 1.014-2.428.266-.29.58-.363.774-.363.194 0 .387.001.555.009.178.008.416-.068.65.493.244.58.826 2.013.899 2.158.073.146.121.315.024.507-.097.192-.145.312-.29.484-.145.172-.305.385-.436.517-.145.146-.297.305-.128.595.169.29.749 1.237 1.607 2.001 1.103.982 2.033 1.287 2.324 1.432.29.145.46.121.63-.073.17-.194.726-.846.919-1.137.193-.29.387-.242.652-.145.265.097 1.688.796 1.979.941.29.145.483.218.555.339.073.121.073.702-.171 1.39z"/></svg>
-      Konsultasikan Sebelum Membangun
+      Konsultasikan Proyek Anda
     </a>
   </div>
 </section>
@@ -581,44 +592,45 @@ include __DIR__ . '/includes/header.php';
      ========================================================================== -->
 <section class="theme-white section-padding" id="proses">
   <div class="container">
-    <h2 class="section-title">Dari Ide hingga Siap Dibangun</h2>
+    <div class="eyebrow" style="margin-bottom: 0.5rem; color: var(--rbk-orange);">ALUR KERJA</div>
+    <h2 class="section-title">Proses yang Jelas dari Awal</h2>
     <p class="section-subtitle">Alur kerja transparan, terstruktur, dan aman dari tahap konsultasi hingga penyerahan berkas.</p>
 
     <div class="process-timeline">
       <div class="process-step">
         <div class="step-num">01</div>
         <div class="step-title">Consultation</div>
-        <div class="step-desc">Memahami kebutuhan, lokasi, ukuran, fungsi, style, dan target budget proyek.</div>
+        <div class="step-desc">Memahami kebutuhan, lokasi, fungsi, style, dan budget.</div>
       </div>
 
       <div class="process-step">
         <div class="step-num">02</div>
         <div class="step-title">Concept Development</div>
-        <div class="step-desc">Konsep, layout, dan karakter arsitektur mulai dikembangkan.</div>
+        <div class="step-desc">Mengembangkan konsep, layout, dan karakter desain.</div>
       </div>
 
       <div class="process-step">
         <div class="step-num">03</div>
         <div class="step-title">Design Development</div>
-        <div class="step-desc">Proporsi, material, ruang, dan detail desain dimatangkan.</div>
+        <div class="step-desc">Mematangkan ruang, material, dan detail.</div>
       </div>
 
       <div class="process-step">
         <div class="step-num">04</div>
         <div class="step-title">Technical Planning</div>
-        <div class="step-desc">Gambar teknis, struktur, MEP, dan kebutuhan perencanaan lainnya disusun sesuai scope.</div>
+        <div class="step-desc">Menyiapkan kebutuhan teknis sesuai scope proyek.</div>
       </div>
 
       <div class="process-step">
         <div class="step-num">05</div>
         <div class="step-title">Budget Planning</div>
-        <div class="step-desc">Perencanaan RAB membantu memberikan gambaran kebutuhan biaya.</div>
+        <div class="step-desc">Memberikan gambaran kebutuhan biaya melalui RAB.</div>
       </div>
 
       <div class="process-step">
         <div class="step-num">06</div>
         <div class="step-title">Final Delivery</div>
-        <div class="step-desc">Dokumen desain disiapkan untuk menjadi dasar realisasi pembangunan.</div>
+        <div class="step-desc">Dokumen desain disiapkan untuk proses pembangunan.</div>
       </div>
     </div>
 
@@ -744,11 +756,12 @@ include __DIR__ . '/includes/header.php';
      ========================================================================== -->
 <section class="theme-light section-padding" id="lead-capture-section">
   <div class="container">
+    <div class="eyebrow" style="margin-bottom: 0.5rem; text-align: center; color: var(--rbk-orange);">MULAI DARI SINI</div>
     <h2 class="section-title" style="text-align: center; max-width: 900px; margin-left: auto; margin-right: auto;">
-      <?= e($settings['section11_headline'] ?? 'Punya Tanah? Sudah Punya Ide? Atau Masih Bingung Harus Mulai dari Mana?'); ?>
+      <?= e($settings['section11_headline'] ?? 'Punya Tanah atau Rencana Membangun?'); ?>
     </h2>
     <p style="text-align: center; font-size: 1.125rem; color: #525252; max-width: 700px; margin: 0 auto 2.5rem auto;">
-      <?= e($settings['section11_body'] ?? 'Mulai dengan konsultasi bersama RBK Studio. Ceritakan proyek Anda kepada tim kami.'); ?>
+      <?= e($settings['section11_body'] ?? 'Tidak perlu sudah memiliki semua jawabannya. Tim RBK Studio akan membantu mengarahkan kebutuhan perencanaan proyek Anda.'); ?>
     </p>
 
     <div class="lead-form-box">
