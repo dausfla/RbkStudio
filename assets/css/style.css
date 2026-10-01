@@ -4,23 +4,26 @@
    Typography: Cormorant Garamond (Serif Display) + Plus Jakarta Sans (Sans Body)
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap');
 
 :root {
-  --rbk-orange: #DD5C3E;
-  --rbk-orange-hover: #D83C1A;
-  --rbk-orange-dark: #C23A18;
-  --rbk-black: #000000;
-  --rbk-dark-bg: #0A0A0A;
+  --rbk-orange: #E05328;
+  --rbk-orange-hover: #C8461D;
+  --rbk-orange-dark: #B53D17;
+  --rbk-black: #0D0D0D;
+  --rbk-dark-bg: #0D0D0D;
   --rbk-dark-card: #141414;
-  --rbk-text-dark: #1A1A1A;
-  --rbk-gray-border: #D9D9D9;
+  --rbk-dark-charcoal: #121212;
+  --rbk-text-dark: #0D0D0D;
+  --rbk-text-light: #E5E5E5;
+  --rbk-gray-border: #2A2826;
   --rbk-gray-light: #F4F4F4;
-  --rbk-gray-muted: #737373;
+  --rbk-gray-muted: #A8A197;
   --rbk-white: #FFFFFF;
   
+  --font-montserrat: 'Montserrat', 'Plus Jakarta Sans', sans-serif;
+  --font-sans: 'Montserrat', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-serif: 'Cormorant Garamond', Georgia, serif;
-  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   
   --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   --container-max: 1200px;
@@ -1097,7 +1100,7 @@ ul {
    SECTION 07: HARD-SELL VALUE (ORANGE TERRACOTTA BAND)
    ========================================================================== */
 .hardsell-band {
-  background-color: #DD5C3E;
+  background-color: var(--rbk-orange);
   color: #FFFFFF;
   padding: 5.5rem 0;
   position: relative;
