@@ -32,13 +32,13 @@ include __DIR__ . '/includes/header.php';
   <div class="hero-overlay"></div>
   <div class="container hero-content">
     <div class="eyebrow"><?= e($settings['hero_eyebrow'] ?? 'RBK Studio · Architecture & Planning'); ?></div>
-    <h1 class="hero-title"><?= e($settings['hero_headline'] ?? 'Jasa Arsitek Terbaik & Terlengkap untuk Mewujudkan Bangunan Impian Anda'); ?></h1>
+    <h1 class="hero-title">Jasa Arsitek <span style="color: var(--rbk-orange);">Terbaik & Terlengkap</span> untuk Mewujudkan Bangunan Impian Anda</h1>
     
     <div style="font-size: clamp(1.25rem, 2.2vw, 1.6rem); font-weight: 700; color: #FFFFFF; margin-bottom: 1rem; border-left: 3px solid var(--rbk-orange); padding-left: 0.75rem; text-align: left;">
       Dari Konsep hingga Siap Dibangun, Semua Direncanakan dalam Satu Layanan.
     </div>
 
-    <p class="hero-body"><?= e($settings['hero_supporting'] ?? 'RBK Studio membantu merencanakan rumah, ruko, renovasi hingga bangunan komersial secara menyeluruh, mulai dari konsep arsitektur, visualisasi 3D, gambar kerja, struktur & MEP, hingga RAB.'); ?></p>
+    <p class="hero-body">RBK Studio membantu merencanakan <strong>rumah, ruko, renovasi hingga bangunan komersial</strong> secara menyeluruh, mulai dari <strong>konsep arsitektur, visualisasi 3D, gambar kerja, struktur & MEP, hingga RAB.</strong></p>
     
     <div class="hero-cta-group">
       <?php 
@@ -52,6 +52,47 @@ include __DIR__ . '/includes/header.php';
     </div>
     
     <p class="hero-microcopy">Bukan hanya indah secara visual, tetapi juga fungsional, terukur, efisien, dan siap direalisasikan.</p>
+
+    <!-- Point 1: Hero Stats Banner Card (Image 1) -->
+    <div class="hero-stats-banner">
+      <div class="hero-stats-header">
+        <div class="hero-stat-badge">
+          <span class="badge-label">BERPENGALAMAN</span>
+          <span class="badge-val">Sejak 2007</span>
+        </div>
+        <div class="hero-stat-badge">
+          <span class="badge-label">PROYEK DIKERJAKAN</span>
+          <span class="badge-val">1.350+ project</span>
+        </div>
+      </div>
+      
+      <div class="hero-stats-buttons">
+        <a href="<?= e(buildWaUrl($waNumber, $waMsgUmum)); ?>" target="_blank" class="btn btn-primary" data-cta-code="UMUM">
+          <svg class="header-wa-icon" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.764.459 3.485 1.332 5.001L2 22l5.127-1.338c1.464.795 3.111 1.213 4.88 1.214h.005c5.503 0 9.988-4.478 9.989-9.984 0-2.668-1.037-5.176-2.922-7.062A9.925 9.925 0 0 0 12.012 2zm5.827 14.19c-.244.688-1.42 1.314-1.95 1.397-.492.077-1.129.11-1.815-.109-.415-.132-.951-.309-1.642-.607-2.906-1.258-4.799-4.2-4.945-4.394-.146-.195-1.189-1.58-1.189-3.013 0-1.433.748-2.138 1.014-2.428.266-.29.58-.363.774-.363.194 0 .387.001.555.009.178.008.416-.068.65.493.244.58.826 2.013.899 2.158.073.146.121.315.024.507-.097.192-.145.312-.29.484-.145.172-.305.385-.436.517-.145.146-.297.305-.128.595.169.29.749 1.237 1.607 2.001 1.103.982 2.033 1.287 2.324 1.432.29.145.46.121.63-.073.17-.194.726-.846.919-1.137.193-.29.387-.242.652-.145.265.097 1.688.796 1.979.941.29.145.483.218.555.339.073.121.073.702-.171 1.39z"/></svg>
+          Konsultasikan sekarang
+        </a>
+        <a href="#paket" class="btn btn-outline" style="border: 1px solid rgba(255,255,255,0.4); background: transparent;">Lihat paket harga</a>
+      </div>
+
+      <div class="hero-stats-footer-grid">
+        <div class="hero-stat-col">
+          <div class="stat-main">Kota Bogor</div>
+          <div class="stat-sub">Kantor pusat kami</div>
+        </div>
+        <div class="hero-stat-col">
+          <div class="stat-main">Rp60 rb/m²</div>
+          <div class="stat-sub">Desain / perencanaan mulai</div>
+        </div>
+        <div class="hero-stat-col">
+          <div class="stat-main">Rp4 jt/m²</div>
+          <div class="stat-sub">Bangun rumah mulai</div>
+        </div>
+        <div class="hero-stat-col">
+          <div class="stat-main">Gratis</div>
+          <div class="stat-sub">Konsultasi & survei (Jabodetabek)</div>
+        </div>
+      </div>
+    </div>
 
     <!-- Running Text Ticker / Marquee Banner for Target Cities -->
     <div class="city-marquee-container">
@@ -119,18 +160,34 @@ include __DIR__ . '/includes/header.php';
 <section class="problem-part section-padding" id="problem">
   <div class="container">
     <div class="problem-eyebrow">KENAPA PERENCANAAN PENTING</div>
-    <h2 class="problem-title"><?= e($settings['section02_problem_headline'] ?? 'Bangun Sekali. Rencanakan dengan Benar Sejak Awal.'); ?></h2>
-    <p class="problem-subtitle"><?= e($settings['section02_problem_subheadline'] ?? 'Jangan biarkan keputusan desain yang salah membuat Anda membayar dua kali.'); ?></p>
+    <h2 class="problem-title">Bangun Sekali. Rencanakan dengan Benar Sejak Awal.</h2>
+    <p class="problem-subtitle" style="color: var(--rbk-orange); font-weight: 600; margin-bottom: 2.5rem;">Jangan biarkan keputusan desain yang salah membuat Anda membayar dua kali.</p>
 
-    <p style="color: #D4D4D4; font-size: 1.0625rem; max-width: 800px; margin-bottom: 1.5rem; line-height: 1.7;">
-      Kesalahan dalam perencanaan bisa membuat proses pembangunan lebih rumit dan biaya semakin besar. Masalah-masalah ini sering kali terjadi karena keputusan penting belum direncanakan sejak awal:
-    </p>
+    <!-- Point 2: 4 Step Solution Cards (Matching Image 2) -->
+    <div class="step-solution-grid">
+      <div class="step-card">
+        <div class="step-card-num">01</div>
+        <h3 class="step-card-title">Rencanakan dengan matang</h3>
+        <p class="step-card-desc">Tentukan kebutuhan ruang, jumlah kamar, dan rencana pengembangan rumah ke depan. Semua dituangkan ke dalam gambar desain yang jelas.</p>
+      </div>
 
-    <div class="risk-grid">
-      <div class="risk-item">Layout kurang optimal</div>
-      <div class="risk-item">Perubahan instalasi di tengah jalan</div>
-      <div class="risk-item">Bongkar ulang</div>
-      <div class="risk-item">Pembengkakan budget</div>
+      <div class="step-card">
+        <div class="step-card-num">02</div>
+        <h3 class="step-card-title">Susun anggaran yang realistis</h3>
+        <p class="step-card-desc">Biaya material, upah, perizinan, dan cadangan tak terduga dihitung di awal lewat RAB, supaya dana tidak habis di tengah jalan.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-card-num">03</div>
+        <h3 class="step-card-title">Buat jadwal per tahap</h3>
+        <p class="step-card-desc">Pekerjaan dibagi per tahap dengan target waktu masing-masing, sehingga progres mudah dipantau dari minggu ke minggu.</p>
+      </div>
+
+      <div class="step-card step-card-dark">
+        <div class="step-card-num">04</div>
+        <h3 class="step-card-title">Serahkan pada tim yang tepat</h3>
+        <p class="step-card-desc">Pilih arsitek dan kontraktor yang terbuka soal harga dan spesifikasi. Di RBK, harga per m² dan material tiap paket ditulis sejak awal.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -225,16 +282,85 @@ include __DIR__ . '/includes/header.php';
      ========================================================================== -->
 <section class="theme-light section-padding" id="portfolio">
   <div class="container">
-    <h2 class="section-title">Bukan Sekadar Render.</h2>
+    <div class="eyebrow" style="margin-bottom: 0.5rem; color: var(--rbk-orange);">PORTFOLIO</div>
+    <h2 class="section-title">BUKAN SEKADAR RENDER.</h2>
     <p class="section-subtitle" style="color: var(--rbk-orange); font-weight: 600;">Setiap desain dimulai dari masalah yang harus diselesaikan.</p>
 
-    <!-- Portfolio Category Tabs -->
-    <div class="portfolio-tabs">
-      <button class="tab-btn active" data-filter="all">Semua Project</button>
-      <button class="tab-btn" data-filter="Residential">Residential</button>
-      <button class="tab-btn" data-filter="Commercial">Commercial</button>
-      <button class="tab-btn" data-filter="Ruko">Ruko</button>
-      <button class="tab-btn" data-filter="Interior">Interior</button>
+    <!-- Point 4: Before/After Renovation Showcase Cards (Matching Image 4 Top) -->
+    <div class="before-after-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+      <!-- RenoVancy Card 1 -->
+      <div class="ba-card" style="background: #FFF; border-radius: 8px; border: 1px solid #E5E5E5; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <div class="ba-media-split" style="position: relative; height: 200px; background: #262626; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+          <div style="position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 1fr;">
+            <div style="background: #1F1F1F; display: flex; align-items: center; justify-content: center; position: relative; border-right: 2px solid var(--rbk-orange);">
+              <span style="position: absolute; top: 10px; left: 10px; font-size: 0.65rem; background: rgba(0,0,0,0.7); color: #FFF; padding: 2px 8px; border-radius: 4px; font-weight: 700;">BEFORE</span>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#737373" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            </div>
+            <div style="background: #2D2622; display: flex; align-items: center; justify-content: center; position: relative;">
+              <span style="position: absolute; top: 10px; right: 10px; font-size: 0.65rem; background: var(--rbk-orange); color: #FFF; padding: 2px 8px; border-radius: 4px; font-weight: 700;">AFTER</span>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--rbk-orange)" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+            </div>
+          </div>
+          <div style="position: absolute; width: 32px; height: 32px; background: var(--rbk-orange); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 0.75rem; font-weight: 800; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">↔</div>
+        </div>
+        <div style="padding: 1.25rem;">
+          <h4 style="font-size: 1.125rem; font-weight: 700; color: #0D0D0D; margin-bottom: 0.5rem;">RenoVancy Rumah Mr. Putra</h4>
+          <span style="display: inline-block; font-size: 0.7rem; font-weight: 700; background: #F5F5F5; color: #525252; padding: 3px 8px; border-radius: 3px;">RENOVASI TOTAL</span>
+        </div>
+      </div>
+
+      <!-- RenoVancy Card 2 -->
+      <div class="ba-card" style="background: #FFF; border-radius: 8px; border: 1px solid #E5E5E5; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <div class="ba-media-split" style="position: relative; height: 200px; background: #262626; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+          <div style="position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 1fr;">
+            <div style="background: #1F1F1F; display: flex; align-items: center; justify-content: center; position: relative; border-right: 2px solid var(--rbk-orange);">
+              <span style="position: absolute; top: 10px; left: 10px; font-size: 0.65rem; background: rgba(0,0,0,0.7); color: #FFF; padding: 2px 8px; border-radius: 4px; font-weight: 700;">BEFORE</span>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#737373" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            </div>
+            <div style="background: #2D2622; display: flex; align-items: center; justify-content: center; position: relative;">
+              <span style="position: absolute; top: 10px; right: 10px; font-size: 0.65rem; background: var(--rbk-orange); color: #FFF; padding: 2px 8px; border-radius: 4px; font-weight: 700;">AFTER</span>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--rbk-orange)" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+            </div>
+          </div>
+          <div style="position: absolute; width: 32px; height: 32px; background: var(--rbk-orange); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 0.75rem; font-weight: 800; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">↔</div>
+        </div>
+        <div style="padding: 1.25rem;">
+          <h4 style="font-size: 1.125rem; font-weight: 700; color: #0D0D0D; margin-bottom: 0.5rem;">RenoVancy Rumah Mrs. Sela</h4>
+          <span style="display: inline-block; font-size: 0.7rem; font-weight: 700; background: #F5F5F5; color: #525252; padding: 3px 8px; border-radius: 3px;">ROOFTOP</span>
+        </div>
+      </div>
+
+      <!-- RenoVancy Card 3 -->
+      <div class="ba-card" style="background: #FFF; border-radius: 8px; border: 1px solid #E5E5E5; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <div class="ba-media-split" style="position: relative; height: 200px; background: #262626; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+          <div style="position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 1fr;">
+            <div style="background: #1F1F1F; display: flex; align-items: center; justify-content: center; position: relative; border-right: 2px solid var(--rbk-orange);">
+              <span style="position: absolute; top: 10px; left: 10px; font-size: 0.65rem; background: rgba(0,0,0,0.7); color: #FFF; padding: 2px 8px; border-radius: 4px; font-weight: 700;">BEFORE</span>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#737373" stroke-width="1.5"><path d="M3 21h18M3 7l9-4 9 4v14H3V7z"/></svg>
+            </div>
+            <div style="background: #2D2622; display: flex; align-items: center; justify-content: center; position: relative;">
+              <span style="position: absolute; top: 10px; right: 10px; font-size: 0.65rem; background: var(--rbk-orange); color: #FFF; padding: 2px 8px; border-radius: 4px; font-weight: 700;">AFTER</span>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--rbk-orange)" stroke-width="1.5"><path d="M3 21h18M3 7l9-4 9 4v14H3V7z"/><path d="M9 21v-6h6v6"/></svg>
+            </div>
+          </div>
+          <div style="position: absolute; width: 32px; height: 32px; background: var(--rbk-orange); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 0.75rem; font-weight: 800; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">↔</div>
+        </div>
+        <div style="padding: 1.25rem;">
+          <h4 style="font-size: 1.125rem; font-weight: 700; color: #0D0D0D; margin-bottom: 0.5rem;">Ruko Cigiringsing</h4>
+          <span style="display: inline-block; font-size: 0.7rem; font-weight: 700; background: #F5F5F5; color: #525252; padding: 3px 8px; border-radius: 3px;">KOMERSIAL</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+      <div style="font-size: 0.75rem; font-weight: 800; color: var(--rbk-orange); letter-spacing: 0.1em; text-transform: uppercase;">PROYEK SELESAI 100%</div>
+      <!-- Portfolio Category Tabs per Point 4 PDF -->
+      <div class="portfolio-tabs" style="margin-bottom: 0;">
+        <button class="tab-btn active" data-filter="all">Semua</button>
+        <button class="tab-btn" data-filter="Rumah">Rumah</button>
+        <button class="tab-btn" data-filter="Kost">Kost</button>
+        <button class="tab-btn" data-filter="Kantor & gudang">Kantor & gudang</button>
+      </div>
     </div>
 
     <!-- Portfolio Grid -->
@@ -263,6 +389,16 @@ include __DIR__ . '/includes/header.php';
           </div>
         </div>
       <?php endforeach; ?>
+    </div>
+
+    <!-- Point 4: Bottom Projects List Note & CTA (Matching Image 4 Bottom) -->
+    <div style="background: #FFF; padding: 1.25rem; border-radius: 6px; border: 1px solid #E5E5E5; margin-top: 2.5rem; text-align: center;">
+      <p style="font-size: 0.875rem; color: #525252; margin-bottom: 1rem; max-width: 100%;">
+        <strong>Proyek lain:</strong> Modiy Id Headquarters · Switch.Co Living/Kost · Sansweet Home & Wedding Gallery · Lula's Place · Orya Husna · ER House Santorini · dan lainnya.
+      </p>
+      <a href="<?= e(buildWaUrl($waNumber, 'Halo RBK Studio, saya ingin melihat galeri portfolio lengkap proyek RBK Studio.')); ?>" target="_blank" class="btn btn-outline" style="border-radius: 4px; padding: 0.6rem 1.25rem; font-size: 0.8rem;">
+        Lihat hasil kerja lainnya ↗
+      </a>
     </div>
 
     <?php if (!empty($portfolioVideos)): ?>
@@ -333,44 +469,87 @@ include __DIR__ . '/includes/header.php';
 </section>
 
 <!-- ==========================================================================
-     SECTION 05: WHY RBK STUDIO (TAHAP TRUST)
+     SECTION 05: WHY RBK STUDIO / KEUNGGULAN (TAHAP TRUST)
      ========================================================================== -->
-<section class="theme-white section-padding" id="tentang">
+<section class="theme-light section-padding" id="tentang">
   <div class="container">
     <div class="eyebrow" style="margin-bottom: 0.5rem; color: var(--rbk-orange);">KEUNGGULAN</div>
-    <h2 class="section-title">Kenapa RBK Studio?</h2>
-    <p class="section-subtitle" style="color: var(--rbk-orange); font-weight: 600;">Mengubah capability menjadi alasan kuat untuk memilih partner perencanaan terbaik.</p>
-
-    <div class="why-grid">
-      <div class="why-item">
-        <div class="why-title">Design with Purpose</div>
-        <div class="why-desc">Setiap keputusan desain memiliki fungsi dan alasan.</div>
+    <h2 class="section-title" style="letter-spacing: -0.02em;">KENAPA HARUS <span style="color: var(--rbk-orange);">RANCANG BANGUN KREASI?</span></h2>
+    
+    <!-- Point 3: 12 Numbered Keunggulan Cards (Matching Image 3) -->
+    <div class="why12-grid">
+      <div class="why12-card">
+        <div class="why12-num">01</div>
+        <h3 class="why12-title">Konsultasi & survei gratis</h3>
+        <p class="why12-desc">Tanpa biaya untuk wilayah Jabodetabek, sebelum Anda memutuskan apa pun.</p>
       </div>
 
-      <div class="why-item">
-        <div class="why-title">Integrated Planning</div>
-        <div class="why-desc">Arsitektur hingga kebutuhan teknis direncanakan dalam satu alur.</div>
+      <div class="why12-card">
+        <div class="why12-num">02</div>
+        <h3 class="why12-title">Kantor di Bogor</h3>
+        <p class="why12-desc">Berkantor di Pasirmulya, Kota Bogor, jadi dekat dengan lokasi proyek Anda.</p>
       </div>
 
-      <div class="why-item">
-        <div class="why-title">Personalized Design</div>
-        <div class="why-desc">Desain dikembangkan sesuai kebutuhan dan karakter setiap klien.</div>
+      <div class="why12-card">
+        <div class="why12-num">03</div>
+        <h3 class="why12-title">Harga per m² terbuka</h3>
+        <p class="why12-desc">Paket Basic, Standard, dan Premium lengkap dengan kisaran harga sejak awal.</p>
       </div>
 
-      <div class="why-item">
-        <div class="why-title">Buildable Design</div>
-        <div class="why-desc">Bukan sekadar konsep, tetapi desain yang dipersiapkan untuk direalisasikan.</div>
+      <div class="why12-card">
+        <div class="why12-num">04</div>
+        <h3 class="why12-title">Spesifikasi material jelas</h3>
+        <p class="why12-desc">Merek dan jenis material tiap paket ditulis, dari pondasi sampai sanitair.</p>
       </div>
 
-      <div class="why-item">
-        <div class="why-title">Cost Awareness</div>
-        <div class="why-desc">Perencanaan mempertimbangkan kebutuhan pembangunan dan budget.</div>
+      <div class="why12-card">
+        <div class="why12-num">05</div>
+        <h3 class="why12-title">Desain mulai Rp60 rb/m²</h3>
+        <p class="why12-desc">Butuh gambar saja? Paket perencanaan tersedia terpisah dari konstruksi.</p>
       </div>
 
-      <div class="why-item">
-        <div class="why-title">Jabodetabek Coverage</div>
-        <div class="why-desc">Layanan profesional terjangkau untuk wilayah Jakarta, Bogor, Depok, Tangerang, dan Bekasi.</div>
+      <div class="why12-card">
+        <div class="why12-num">06</div>
+        <h3 class="why12-title">Harga fleksibel</h3>
+        <p class="why12-desc">Rencana dan spesifikasi bisa disesuaikan dengan kemampuan anggaran Anda.</p>
       </div>
+
+      <div class="why12-card">
+        <div class="why12-num">07</div>
+        <h3 class="why12-title">Satu tim, desain sampai bangun</h3>
+        <p class="why12-desc">RBK Studio, RBK Konstruksi, dan RBK Kreasi bekerja dalam satu alur.</p>
+      </div>
+
+      <div class="why12-card">
+        <div class="why12-num">08</div>
+        <h3 class="why12-title">Pengalaman developer</h3>
+        <p class="why12-desc">Grup kami membangun perumahan Eltama Property di Kota dan Kabupaten Bogor.</p>
+      </div>
+
+      <div class="why12-card">
+        <div class="why12-num">09</div>
+        <h3 class="why12-title">Arsitek berpengalaman</h3>
+        <p class="why12-desc">Perencanaan ditangani tenaga ahli arsitek dengan pengalaman internasional.</p>
+      </div>
+
+      <div class="why12-card">
+        <div class="why12-num">10</div>
+        <h3 class="why12-title">Tenaga kerja profesional</h3>
+        <p class="why12-desc">Tukang dan pengawas lapangan yang terbiasa dengan proyek rumah dan komersial.</p>
+      </div>
+
+      <div class="why12-card">
+        <div class="why12-num">11</div>
+        <h3 class="why12-title">Kalkulator RAB</h3>
+        <p class="why12-desc">Cek perkiraan biaya pembangunan kapan saja lewat kalkulator di situs RBK.</p>
+      </div>
+
+      <div class="why12-card">
+        <div class="why12-num">12</div>
+        <h3 class="why12-title">Admin responsif, jujur & amanah</h3>
+        <p class="why12-desc">Pertanyaan dijawab cepat di jam kerja, dan setiap proses dijalankan secara terbuka.</p>
+      </div>
+    </div>
     </div>
 
     <div style="margin-top: 3.5rem; text-align: center;">
@@ -498,6 +677,118 @@ include __DIR__ . '/includes/header.php';
           </div>
         </div>
       <?php endforeach; ?>
+    </div>
+
+    <!-- ==========================================================================
+         POINT 5: PAKET BANGUN RUMAH PER M² & KALKULATOR BIAYA BANGUN
+         ========================================================================== -->
+    <div style="margin-top: 5rem; padding-top: 4rem; border-top: 1px solid rgba(0,0,0,0.1);" id="paket-bangun">
+      <div class="eyebrow" style="margin-bottom: 0.5rem; color: var(--rbk-orange);">HARGA TRANSPARAN</div>
+      <h2 class="section-title" style="letter-spacing: -0.02em;">PAKET BANGUN RUMAH <span style="color: var(--rbk-orange);">PER M²</span></h2>
+      <p style="font-size: 1rem; color: #525252; max-width: 800px; margin-bottom: 2.5rem;">
+        Pilih paket sesuai spesifikasi material yang Anda inginkan. Harga khusus wilayah Bogor.
+      </p>
+
+      <div class="construction-pricing-grid">
+        <!-- BASIC -->
+        <div class="const-card">
+          <div class="const-pkg-name">BASIC</div>
+          <div class="const-pkg-price">Rp4–4,5 jt</div>
+          <div class="const-pkg-unit">per m² luas bangunan</div>
+          <ul class="const-spec-list">
+            <li><span>Struktur</span> <strong>Kolom praktis, pondasi batu kali</strong></li>
+            <li><span>Lantai utama</span> <strong>Keramik Roman</strong></li>
+            <li><span>Kusen & pintu</span> <strong>Kayu meranti</strong></li>
+            <li><span>Cat</span> <strong>Vinilex</strong></li>
+            <li><span>Atap</span> <strong>Baja ringan, genteng metal</strong></li>
+            <li><span>Sanitair</span> <strong>INA</strong></li>
+          </ul>
+          <a href="<?= e(buildWaUrl($waNumber, "Halo RBK Studio, saya ingin konsultasi Paket Bangun Rumah Basic (Rp4-4,5 jt/m²).")); ?>" target="_blank" class="btn btn-outline" style="width: 100%; border-radius: 20px; font-size: 0.8rem; background: #0D0D0D;">Pilih Basic</a>
+        </div>
+
+        <!-- STANDARD (PALING SEIMBANG) -->
+        <div class="const-card featured">
+          <div class="const-badge">PALING SEIMBANG</div>
+          <div class="const-pkg-name">STANDARD</div>
+          <div class="const-pkg-price">Rp4,5–5 jt</div>
+          <div class="const-pkg-unit">per m² luas bangunan</div>
+          <ul class="const-spec-list">
+            <li><span>Struktur</span> <strong>Kolom, pondasi batu kali</strong></li>
+            <li><span>Dinding</span> <strong>Hebel</strong></li>
+            <li><span>Kusen & jendela</span> <strong>Aluminium</strong></li>
+            <li><span>Plafon</span> <strong>Gypsum + rangka hollow</strong></li>
+            <li><span>Atap</span> <strong>Baja ringan, metal/beton</strong></li>
+            <li><span>Sanitair</span> <strong>Setara American Standard</strong></li>
+          </ul>
+          <a href="<?= e(buildWaUrl($waNumber, "Halo RBK Studio, saya ingin konsultasi Paket Bangun Rumah Standard (Rp4,5-5 jt/m²).")); ?>" target="_blank" class="btn btn-primary" style="width: 100%; border-radius: 20px; font-size: 0.8rem;">Pilih Standard</a>
+        </div>
+
+        <!-- PREMIUM -->
+        <div class="const-card">
+          <div class="const-pkg-name">PREMIUM</div>
+          <div class="const-pkg-price">Rp6–7,5 jt</div>
+          <div class="const-pkg-unit">per m² luas bangunan</div>
+          <ul class="const-spec-list">
+            <li><span>Struktur</span> <strong>Footplate / batu kali</strong></li>
+            <li><span>Lantai utama</span> <strong>Granit</strong></li>
+            <li><span>Dinding</span> <strong>Bata merah</strong></li>
+            <li><span>Kusen</span> <strong>Aluminium 4" Alexindo</strong></li>
+            <li><span>Cat & listrik</span> <strong>Dulux - Panasonic</strong></li>
+            <li><span>Sanitair</span> <strong>Setara Toto</strong></li>
+          </ul>
+          <a href="<?= e(buildWaUrl($waNumber, "Halo RBK Studio, saya ingin konsultasi Paket Bangun Rumah Premium (Rp6-7,5 jt/m²).")); ?>" target="_blank" class="btn btn-outline" style="width: 100%; border-radius: 20px; font-size: 0.8rem; background: #0D0D0D;">Pilih Premium</a>
+        </div>
+      </div>
+
+      <p style="font-size: 0.8rem; color: #737373; margin-top: 1rem; margin-bottom: 2rem;">
+        *Harga belum termasuk bangunan pendukung (pagar, carport, dll). Angka final ditetapkan setelah survei dan RAB.
+      </p>
+
+      <!-- Sub-banner: Hanya Butuh Desain? -->
+      <div class="design-only-banner">
+        <div>
+          <div style="font-size: 0.75rem; font-weight: 800; color: var(--rbk-orange); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.25rem;">HANYA BUTUH DESAIN?</div>
+          <div style="font-size: 1.125rem; font-weight: 700; color: #FFF;">Paket perencanaan (gambar arsitektur) mulai <span style="color: var(--rbk-orange);">Rp60.000/m²</span></div>
+        </div>
+        <a href="#paket" class="btn btn-outline" style="border-radius: 20px; padding: 0.5rem 1.5rem; font-size: 0.8rem; background: #FFF; color: #0D0D0D !important;">Pesan desain</a>
+      </div>
+
+      <!-- Live Construction Estimator Box (Matching Image 5 Bottom) -->
+      <div class="construction-calc-box">
+        <div class="const-calc-grid">
+          <div>
+            <div style="font-size: 0.75rem; font-weight: 800; color: var(--rbk-orange); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.25rem;">KALKULATOR CEPAT</div>
+            <h3 style="font-size: 1.5rem; color: #FFF; font-weight: 800; margin-bottom: 1.25rem;">ESTIMASI BIAYA BANGUN</h3>
+            
+            <div style="margin-bottom: 1.25rem;">
+              <label style="display: flex; justify-content: space-between; font-size: 0.85rem; color: #D4D4D4; margin-bottom: 0.35rem; font-weight: 600;">
+                <span>Luas bangunan (total semua lantai)</span>
+                <span id="constAreaVal" style="color: #FFF; font-weight: 800;">120 m²</span>
+              </label>
+              <input type="range" id="constAreaSlider" class="estimator-range-slider" min="36" max="1000" step="5" value="120">
+            </div>
+
+            <div>
+              <div style="font-size: 0.8rem; color: #A3A3A3; margin-bottom: 0.35rem; font-weight: 600;">Paket</div>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;" id="constPkgBtnGroup">
+                <button type="button" class="const-pkg-btn" data-min="4" data-max="4.5" data-name="Basic">Basic</button>
+                <button type="button" class="const-pkg-btn active" data-min="4.5" data-max="5" data-name="Standard">Standard</button>
+                <button type="button" class="const-pkg-btn" data-min="6" data-max="7.5" data-name="Premium">Premium</button>
+              </div>
+            </div>
+            <p style="font-size: 0.7rem; color: #737373; margin-top: 1rem;">Estimasi kasar dari harga per m² di atas, bukan penawaran resmi.</p>
+          </div>
+
+          <div class="const-calc-result-panel">
+            <div style="font-size: 0.75rem; font-weight: 700; color: #A3A3A3; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem;">PERKIRAAN BIAYA KONSTRUKSI</div>
+            <div class="const-result-price" id="constTotalCost">Rp540–600 jt</div>
+            <p class="const-result-sub" id="constTotalSub">120 m² x Rp4.5-5 jt/m² (Paket Standard). Desain mulai Rp7,2 jt.</p>
+            <a href="#" id="constWaBtn" target="_blank" class="btn btn-outline" style="border-radius: 20px; padding: 0.6rem 1.25rem; font-size: 0.8rem; background: #FFF; color: #0D0D0D !important; font-weight: 700; width: 100%; justify-content: center;" data-wa="<?= e($waNumber); ?>">
+              Minta RAB detail gratis →
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <p style="text-align: center; font-size: 0.9375rem; color: #737373; margin-top: 1.5rem;">

@@ -234,6 +234,64 @@ document.addEventListener('DOMContentLoaded', function () {
     calculateEstimate();
   }
 
+  // 8b. Live Construction Cost Estimator Calculator (Point 5)
+  const constSlider = document.getElementById('constAreaSlider');
+  const constAreaVal = document.getElementById('constAreaVal');
+  const constTotalCost = document.getElementById('constTotalCost');
+  const constTotalSub = document.getElementById('constTotalSub');
+  const constWaBtn = document.getElementById('constWaBtn');
+  const constPkgBtns = document.querySelectorAll('#constPkgBtnGroup .const-pkg-btn');
+
+  if (constSlider && constTotalCost) {
+    let cArea = parseInt(constSlider.value, 10) || 120;
+    let minRate = 4.5;
+    let maxRate = 5;
+    let pkgName = 'Standard';
+
+    function calcConstEstimate() {
+      cArea = parseInt(constSlider.value, 10);
+      if (constAreaVal) constAreaVal.textContent = `${cArea} m²`;
+
+      const minTotalJt = (cArea * minRate).toFixed(0);
+      const maxTotalJt = (cArea * maxRate).toFixed(0);
+      const designTotalJt = ((cArea * 60000) / 1000000).toLocaleString('id-ID', { maximumFractionDigits: 1 });
+
+      constTotalCost.textContent = `Rp${minTotalJt}–${maxTotalJt} jt`;
+      if (constTotalSub) {
+        constTotalSub.textContent = `${cArea} m² x Rp${minRate}-${maxRate} jt/m² (Paket ${pkgName}). Desain mulai Rp${designTotalJt} jt.`;
+      }
+
+      if (constWaBtn) {
+        const waPhone = constWaBtn.getAttribute('data-wa') || '081234500441';
+        const msg = `Halo RBK Studio, saya ingin minta RAB detail gratis berdasarkan simulasi biaya bangun:\n` +
+          `• Luas Bangunan: ${cArea} m²\n` +
+          `• Paket Pilihan: ${pkgName} (Rp${minRate}-${maxRate} jt/m²)\n` +
+          `• Estimasi Biaya Konstruksi: Rp${minTotalJt}-${maxTotalJt} jt\n` +
+          `Mohon informasi survei & penyusunan RAB detailnya. Terima kasih.`;
+        
+        const cleanPhone = waPhone.replace(/[^0-9]/g, '').replace(/^0/, '62');
+        constWaBtn.setAttribute('href', `https://wa.me/${cleanPhone}?text=${encodeURIComponent(msg)}`);
+      }
+    }
+
+    constSlider.addEventListener('input', calcConstEstimate);
+
+    constPkgBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        constPkgBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+
+        minRate = parseFloat(this.getAttribute('data-min'));
+        maxRate = parseFloat(this.getAttribute('data-max'));
+        pkgName = this.getAttribute('data-name');
+
+        calcConstEstimate();
+      });
+    });
+
+    calcConstEstimate();
+  }
+
   // 6. Video Portfolio Autoplay Preview Logic (Hover & Scroll Viewport)
   const videoCards = document.querySelectorAll('.video-card[data-youtube-id]');
 
