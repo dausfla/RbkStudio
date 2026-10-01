@@ -4,10 +4,10 @@
    Typography: Cormorant Garamond (Serif Display) + Plus Jakarta Sans (Sans Body)
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --rbk-orange: #F5502D;
+  --rbk-orange: #DD5C3E;
   --rbk-orange-hover: #D83C1A;
   --rbk-orange-dark: #C23A18;
   --rbk-black: #000000;
@@ -481,12 +481,39 @@ ul {
    SECTION 02: PROBLEM -> SOLUTION
    ========================================================================== */
 .problem-part {
-  background-color: var(--rbk-dark-bg);
-  padding-bottom: 4rem;
+  background-color: #0F0E0D;
+  padding: 5.5rem 0 4rem 0;
 }
 
-.problem-part .section-title {
+.problem-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rbk-orange);
+  margin-bottom: 0.75rem;
+}
+
+.problem-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  font-weight: 400;
   color: #FFFFFF;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.25rem;
+}
+
+.problem-subtitle {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+  color: var(--rbk-orange);
+  line-height: 1.3;
+  max-width: 900px;
+  margin-bottom: 2rem;
 }
 
 .risk-grid {
@@ -1066,43 +1093,85 @@ ul {
 /* ==========================================================================
    SECTION 07: HARD-SELL VALUE
    ========================================================================== */
+/* ==========================================================================
+   SECTION 07: HARD-SELL VALUE (ORANGE TERRACOTTA BAND)
+   ========================================================================== */
 .hardsell-band {
-  background-color: var(--rbk-dark-bg);
-  padding: 6rem 0;
-  text-align: center;
+  background-color: #DD5C3E;
+  color: #FFFFFF;
+  padding: 5.5rem 0;
   position: relative;
 }
 
 .hardsell-headline {
-  font-size: clamp(2.25rem, 4.5vw, 3.75rem);
-  color: var(--rbk-white);
-  margin-bottom: 2rem;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  font-family: var(--font-sans);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: clamp(2.4rem, 4.8vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
+  max-width: 950px;
+}
+
+.hardsell-headline .text-white {
+  color: #FFFFFF !important;
+}
+
+.hardsell-headline .text-black {
+  color: #000000 !important;
 }
 
 .hardsell-body {
-  font-size: 1.125rem;
-  color: #D4D4D4;
-  max-width: 800px;
-  margin: 0 auto 2.5rem auto;
-  line-height: 1.8;
+  font-family: var(--font-sans);
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  color: #FFFFFF;
+  max-width: 850px;
+  margin: 0 0 2.5rem 0;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+.hardsell-motto {
+  font-family: var(--font-sans);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #000000;
+  font-size: clamp(3.5rem, 7.5vw, 6.25rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
 }
 
 .hardsell-closing {
-  font-size: 1.375rem;
-  font-weight: 700;
-  color: var(--rbk-white);
-  margin-bottom: 2.5rem;
+  font-family: var(--font-sans);
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  color: #FFFFFF;
+  font-weight: 400;
+  margin-bottom: 2rem;
 }
 
-.brand-signature {
-  font-family: var(--font-serif);
-  font-size: 1.75rem;
-  font-style: italic;
-  color: var(--rbk-orange);
-  margin-bottom: 2.5rem;
+.btn-black-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #000000;
+  color: #FFFFFF !important;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.9rem 2.25rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  border: none;
+}
+
+.btn-black-pill:hover {
+  background-color: #1A1A1A;
+  transform: translateY(-2px);
+  color: #FFFFFF !important;
 }
 
 /* ==========================================================================
